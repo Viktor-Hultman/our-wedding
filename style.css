@@ -1,16 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
+:root {
+    --light-black: #343434;
+}
+
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--light-black);
 }
 
 .nav-bar {
-    width: 100vw;
+    width: 100%;
     z-index: 3;
 }
 
@@ -26,7 +35,6 @@ body {
     margin-left: 20px;
     padding-bottom: 8px;
     font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
     color: #fff;
     transition: 0.3s;
     border-bottom: 2px solid rgba(255, 255, 255, 0);
@@ -51,7 +59,7 @@ body {
 
 .anmälan-nav-item:hover {
     background: #fff;
-    color: black;
+    color: var(--light-black);
 }
 
 .hero-container {
@@ -60,7 +68,7 @@ body {
     color: white;
     z-index: -1;
     width: 100%;
-    margin: -76.8px 0px -7px 0px;
+    margin: -76.8px 0px 0px 0px;
 }
 
 .hero-img {
@@ -68,14 +76,157 @@ body {
 }
 
 .hero-text {
-    width: 400px;
+    width: 90%;
     color: #fff;
     position: absolute;
     left: 50%;
     top: 40%;
-    transform: translate(-50%, 30%);
+    transform: translate(-50%, 20%);
     text-align: center;
+}
+
+.hero-text h1, p {
+    font-weight: lighter;
+}
+
+.site-container {
+    width: 90%;
+    margin: 5% 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-text {
+    width: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 5%;
+}
+
+.content-para {
+    font-size: 14px;
+    padding: 6% 0px;
+}
+
+.content-link {
+    font-size: 14px;
+    border: 1.5px solid var(--light-black);
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+.content-link:hover {
+    cursor: pointer;
+    background: var(--light-black);
+    color: #fff;
+}
+
+.content-img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    background: #ebebeb;
+}
+
+.footer-list {
+    list-style-type: none;
+    padding: 0px 5%;
+}
+
+.footer-item {
+    font-size: 14px;
+    margin: 12px 0px;
+}
+
+.footer-text {
+    padding: 3px 0px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    transition: 0.3s;
+}
+
+.footer-text:hover {
+    cursor: pointer;
+    border-bottom-color: var(--light-black);
+}
+
+
+/* At 768 width or smaller the burger menu should show instead of the navbar */
+
+@media screen and (max-width: 1040px) {
+    .site-container {
+        margin-top: 0px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .content-text {
+        padding: 0px 15%;
+    }
+
+    #cont1 {
+        order: 1;
+    }
+    #cont2 {
+        order: 2;
+    }
+    #cont3 {
+        order: 4;
+    }
+    #cont4 {
+        order: 3;
+    }
+    #cont5 {
+        order: 5;
+    }
+    #cont6 {
+        order: 6;
+    }
+
+    .footer {
+        justify-content: center;
+    }
+
+    .footer-list {
+        text-align: center;
+    }
 }
 
 
 
+@media screen and (max-width: 550px) {
+    .site-container {
+        margin-bottom: 0px;
+    }
+
+    .content {
+        height: 250px;
+    }
+
+    .content-text {
+        padding: 0px 7%;
+    }
+
+    .site-container {
+        width: 100%;
+    }
+}

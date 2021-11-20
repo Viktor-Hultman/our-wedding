@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <script src="index.js" defer></script>
     <title>Höglin 2022</title>
 </head>
+
 <body>
     <nav class="nav-bar">
         <ul class="nav-list">
@@ -20,8 +22,57 @@
         <img class="hero-img" src="imgs/hoglin-brollop-start-banner.jpg">
         <div class="hero-text">
             <h1>VIKTOR & JESSICA</h1>
-            <h3>#HÖGLIN2022</h3>
+            <p>#HÖGLIN2022</p>
         </div>
     </div>
+    <div class="site-container">
+
+        <div class="content content-text" id="cont1">
+            <h4 class="content-heading">INFORMATION OM BRÖLLOPET</h4>
+            <p class="content-para">
+                Här hittar du all information gällande vårt bröllop såsom 
+                vägbeskrivning till kyrka och festlokal, vilka som ingår i 
+                brudföljet, hur du anmäler att du vill hålla tal etc. 
+                Här hittar du också kontaktinformation om du har några ytterligare frågor.
+            </p>
+            <span class="content-link" onclick="toSite('information')">LÄS MER</span>
+        </div>
+        <div class="content" id="cont2">
+            <img class="content-img" src="imgs/Information.jpg">
+        </div>
+
+        <div class="content" id="cont3">
+            <img class="content-img" src="imgs/Önskelista.jpg">
+        </div>
+        <div class="content content-text" id="cont4">
+            <h4 class="content-heading">VÅR ÖNSKELISTA</h4>
+            <p class="content-para">
+                Om du vill köpa en bröllopsgåva så är vi såklart mycket tacksamma. 
+                Här hittar du en lista på vad vi önskar oss.
+            </p>
+            <span class="content-link" onclick="toSite('önskelista')">LÄS MER</span>
+        </div>
+
+        <div class="content content-text" id="cont5">
+            <h4 class="content-heading">ANMÄLAN</h4>
+            <p class="content-para">
+                Här anmäler du dig till bröllopet och anger bland annat eventuella 
+                kostpreferenser, om du önskar boka boende på gården etc.
+            </p>
+            <span class="content-link" onclick="toSite('anmälan')">LÄS MER</span>
+        </div>
+        <div class="content" id="cont6">
+            <img class="content-img" src="imgs/Anmälan.jpg">
+        </div>
+
+    </div>
+    <footer class="footer">
+        <ul class="footer-list">
+            <li class="footer-item" onclick="toSite('information')"><span class="footer-text">INFORMATION</span></li>
+            <li class="footer-item" onclick="toSite('önskelista')"><span class="footer-text">ÖNSKELISTA</span></li>
+            <li class="footer-item" onclick="toSite('anmälan')"><span class="footer-text">ANMÄLAN</span></li>
+        </ul>
+    </footer>
 </body>
+
 </html>
