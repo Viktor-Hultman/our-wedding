@@ -5,9 +5,13 @@
     padding: 0px;
 }
 
+body {
+    max-width: 100%;
+}
+
 .nav-bar {
     width: 100vw;
-    z-index: 2;
+    z-index: 3;
 }
 
 .nav-list {
@@ -18,9 +22,19 @@
 
 .nav-item {
     float: right;
-    padding: 8px 15px;
-    margin-left: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-bottom: 8px;
     font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    transition: 0.3s;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    border-bottom-color: #fff;
 }
 
 .startsida-nav-item {
@@ -30,26 +44,38 @@
 
 .anmälan-nav-item {
     border: 2px solid #fff;
+    transition: 0.3s;
+    padding: 8px 15px;
+    margin-top: 0px;
 }
 
-.nav-link {
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
+.anmälan-nav-item:hover {
+    background: #fff;
+    color: black;
 }
 
 .hero-container {
-    margin-top: -77.6px;
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: -1;
     width: 100%;
+    margin: -76.8px 0px -7px 0px;
 }
 
-.hero-img-startsida {
-    z-index: -1;
+.hero-img {
     max-width: 100%;
-    min-height: 100px;
-    max-height: 400px;
-    display: block;
-    position: absolute;
-    top: 0;
 }
+
+.hero-text {
+    width: 400px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, 30%);
+    text-align: center;
+}
+
+
 
