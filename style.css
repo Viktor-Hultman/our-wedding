@@ -138,6 +138,121 @@ body {
     object-fit: cover;
 }
 
+
+/* Anmälan */
+.anmälan-container {
+    width: 60%;
+}
+
+.anmälan-para {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.anmälan-form {
+    width: 100%;
+}
+
+#antal {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.anmälan-form input {
+    width: 100%;
+    height: 20px;
+    padding: 5px 0px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+input::placeholder {
+    font-style: italic;
+    padding: 10px;
+}
+
+.dricka-para {
+    margin-bottom: 5px;
+}
+
+.dricka-select-container {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.select-box-outer {
+    min-width: 16px;
+    height: 16px;
+    border: 1.5px solid var(--light-black);
+    border-radius: 1.5px;
+    margin: 0px 30px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-box-outer:hover {
+    cursor: pointer;
+}
+
+.select-box-inner {
+    width: 70%;
+    height: 70%;
+    border-radius: 1.5px;
+    background: var(--light-black);
+    display: none;
+}
+
+.selected {
+    display: block;
+}
+
+.godkänn-filmning-container {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.filmning-para {
+    font-size: 12px;
+}
+
+.anmälan-button-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anmälan-button {
+    width: 90px;
+    height: 30px;
+    border: 1.5px solid var(--light-black);
+    color: var(--light-black);
+    background: white;
+    transition: 0.3s;
+}
+
+.anmälan-button:hover {
+    cursor: pointer;
+    background: var(--light-black);
+    color:white;
+}
+
+.anmälan-button:active {
+    border-color: white;
+}
+
+.hide {
+    display: none;
+}
+
+/* Anmälan */
+
+/* Footer */
 .footer {
     width: 100%;
     height: 180px;
@@ -166,10 +281,11 @@ body {
     cursor: pointer;
     border-bottom-color: var(--light-black);
 }
-
+/* Footer */
 
 /* At 768 width or smaller the burger menu should show instead of the navbar */
 
+/* Media querys */
 @media screen and (max-width: 1040px) {
     .site-container {
         margin-top: 0px;
@@ -229,4 +345,13 @@ body {
     .site-container {
         width: 100%;
     }
+
+    .anmälan-form {
+        padding: 0px 5%;
+    }
+
+    .anmälan-info {
+        padding: 0px 5%;
+    }
 }
+/* Media querys */
