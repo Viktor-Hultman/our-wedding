@@ -58,7 +58,7 @@
                 <div class="dricka-select-container">
                     <p class="select-text">JA</p>
                     <div class="select-box-outer alkohol-ja">
-                        <div class="select-box-inner selected"></div>
+                        <div class="select-box-inner"></div>
                     </div>
                     <p class="select-text">NEJ</p>
                     <div class="select-box-outer alkohol-nej">
@@ -70,7 +70,7 @@
                 <div class="dricka-select-container">
                     <p class="select-text">JA</p>
                     <div class="select-box-outer sovplats-ja">
-                        <div class="select-box-inner selected"></div>
+                        <div class="select-box-inner"></div>
                     </div>
                     <p class="select-text">NEJ</p>
                     <div class="select-box-outer sovplats-nej">
@@ -90,7 +90,7 @@
                 <div class="dricka-select-container">
                     <p class="select-text">JA</p>
                     <div class="select-box-outer alkohol-ja">
-                        <div class="select-box-inner selected"></div>
+                        <div class="select-box-inner"></div>
                     </div>
                     <p class="select-text">NEJ</p>
                     <div class="select-box-outer alkohol-nej">
@@ -102,7 +102,7 @@
                 <div class="dricka-select-container">
                     <p class="select-text">JA</p>
                     <div class="select-box-outer sovplats-ja">
-                        <div class="select-box-inner selected"></div>
+                        <div class="select-box-inner"></div>
                     </div>
                     <p class="select-text">NEJ</p>
                     <div class="select-box-outer sovplats-nej">
@@ -122,7 +122,7 @@
                 <div class="dricka-select-container">
                     <p class="select-text">JA</p>
                     <div class="select-box-outer alkohol-ja">
-                        <div class="select-box-inner selected"></div>
+                        <div class="select-box-inner"></div>
                     </div>
                     <p class="select-text">NEJ</p>
                     <div class="select-box-outer alkohol-nej">
@@ -134,7 +134,7 @@
                 <div class="dricka-select-container">
                     <p class="select-text">JA</p>
                     <div class="select-box-outer sovplats-ja">
-                        <div class="select-box-inner selected"></div>
+                        <div class="select-box-inner"></div>
                     </div>
                     <p class="select-text">NEJ</p>
                     <div class="select-box-outer sovplats-nej">
@@ -154,7 +154,7 @@
                 <div class="dricka-select-container">
                     <p class="select-text">JA</p>
                     <div class="select-box-outer alkohol-ja">
-                        <div class="select-box-inner selected"></div>
+                        <div class="select-box-inner"></div>
                     </div>
                     <p class="select-text">NEJ</p>
                     <div class="select-box-outer alkohol-nej">
@@ -166,7 +166,7 @@
                 <div class="dricka-select-container">
                     <p class="select-text">JA</p>
                     <div class="select-box-outer sovplats-ja">
-                        <div class="select-box-inner selected"></div>
+                        <div class="select-box-inner"></div>
                     </div>
                     <p class="select-text">NEJ</p>
                     <div class="select-box-outer sovplats-nej">
@@ -186,7 +186,7 @@
                 <div class="dricka-select-container">
                     <p class="select-text">JA</p>
                     <div class="select-box-outer alkohol-ja">
-                        <div class="select-box-inner selected"></div>
+                        <div class="select-box-inner"></div>
                     </div>
                     <p class="select-text">NEJ</p>
                     <div class="select-box-outer alkohol-nej">
@@ -198,7 +198,7 @@
                 <div class="dricka-select-container">
                     <p class="select-text">JA</p>
                     <div class="select-box-outer sovplats-ja">
-                        <div class="select-box-inner selected"></div>
+                        <div class="select-box-inner"></div>
                     </div>
                     <p class="select-text">NEJ</p>
                     <div class="select-box-outer sovplats-nej">
@@ -212,7 +212,7 @@
 
             <div class="godkänn-filmning-container">
                 <div class="select-box-outer filmning-ja">
-                    <div class="select-box-inner selected"></div>
+                    <div class="select-box-inner"></div>
                 </div>
                 <p class="filmning-para">JAG GODKÄNNER HÄRMED ATT BLI FILMAD OCH FOTOGRAFERAD UNDER BRÖLLOPSDAGEN*
                 </p>
@@ -222,6 +222,7 @@
 
         <div class="anmälan-button-div">
             <button class="anmälan-button">ANMÄL</button>
+            <span id="validation-message" class="hide">Se till att alla fält ovan har blivit ifyllda!</span>
         </div>
 
     </div>
@@ -232,6 +233,8 @@
             <li class="footer-item" onclick="toSite('önskelista')"><span class="footer-text">ÖNSKELISTA</span></li>
         </ul>
     </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
