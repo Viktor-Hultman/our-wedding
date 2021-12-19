@@ -6,12 +6,6 @@ function toSite(string) {
 
 let önskelista = [
     {
-        "namn": "DYSON V8 DAMMSUGARE",
-        "pris": 3390,
-        "inköpsställe": "ELGIGANTEN",
-        "länk": "https://www.elgiganten.se/product/hem-och-hushall/dammsugare-och-rengoring/53306/dyson-v8-anima-sladdlos-skaftdammsugare-dy24836701?_gl=1*1xghidy*_up*MQ..&gclid=Cj0KCQiA5OuNBhCRARIsACgaiqXJmyDHA9FaL7iWNjLaOojwJfSdw0q8oe2Pwfyeiou2wRq0Ooeoo28aAvK3EALw_wcB&gclsrc=aw.ds"
-    },
-    {
         "namn": "CIRRUS NO.2 HANDSTEAMER - SVART",
         "pris": 1200,
         "inköpsställe": "STEAMERY",
