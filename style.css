@@ -71,7 +71,7 @@ body {
     margin: -76.8px 0px 0px 0px;
 }
 
-.hero-img {
+.img {
     max-width: 100%;
     object-fit: cover;
 }
@@ -83,7 +83,6 @@ body {
     left: 50%;
     top: 40%;
     transform: translate(-50%, 20%);
-    text-align: center;
 }
 
 .hero-text h1, p {
@@ -354,6 +353,93 @@ input::placeholder {
 }
 
 /* Önskelista */
+
+/* Information */
+
+.information-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.anchor-tags {
+    margin: 50px 0px;
+}
+
+.anchor-tag-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.anchor-tag {
+    text-decoration: none;
+    color: var(--light-black);
+    padding-bottom: 8px;
+}
+
+.anchor-tag-item {
+    font-size: 18px;
+    transition: 0.3s;
+    border-bottom: 2px solid #fff;
+    margin: 0px 20px;
+    padding-bottom: 8px;
+}
+
+.anchor-tag-item:hover {
+    cursor: pointer;
+    border-bottom-color: var(--light-black);
+}
+
+.image-banner {
+    position: relative;
+    text-align: center;
+}
+
+.plats-kyrka {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0px;
+    width: 90%;
+}
+
+.plats-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 45%;
+}
+
+.plats-heading {
+    margin-bottom: 10px;
+}
+
+.plats-karta {
+    width: 45%;
+}
+
+.FAQ {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0px;
+    width: 80%;
+}
+
+.FAQ-heading {
+    margin-bottom: 5px;
+}
+
+.FAQ-para {
+    margin-bottom: 20px;
+}
+
+.ps-text {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Information */
 
 /* Footer */
 .footer {
