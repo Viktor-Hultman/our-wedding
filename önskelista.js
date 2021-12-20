@@ -3,7 +3,7 @@ function toSite(string) {
     window.location.href = fullPage
 }
 
-
+// 
 let önskelista = [
     {
         "namn": "DYSON V8 DAMMSUGARE",
