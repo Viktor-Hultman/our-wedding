@@ -18,7 +18,23 @@
             <li class="nav-item önskelista-nav-item" onclick="toSite('önskelista')">ÖNSKELISTA</li>
             <li class="nav-item information-nav-item" onclick="toSite('information')">INFORMATION</li>
         </ul>
+
     </nav>
+    <svg class="hamburger" viewBox='0 0 10 8' width='30'>
+        <path d='M1 1h8M1 4h 8M1 7h8' 
+            stroke='#fff' 
+            stroke-width='1.15' 
+            stroke-linecap='round'/>
+    </svg>
+    <ul class="hamburger-menu">
+        <svg class="menu-exit" viewBox="0 0 20 20" width='30'>
+            <path fill="#343434" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+        </svg>
+        <li class="burger-item lined" onclick="toSite('index')">STARTSIDA</li>
+        <li class="burger-item lined" onclick="toSite('information')">INFORMATION</li>
+        <li class="burger-item lined" onclick="toSite('önskelista')">ÖNSKELISTA</li>
+        <li class="burger-item lined" onclick="toSite('anmälan')">ANMÄLAN</li>
+    </ul>
     <div class="hero-container">
         <img class="img" src="imgs/hoglin-brollop-start-banner.jpg">
         <div class="hero-text">
@@ -38,36 +54,35 @@
 
         <div class="image-banner">
             <img class="img" src="imgs/kyrka.jpg">
-            <div class="hero-text">
-                <h1>INFORMATION</h1>
+            <div class="banner-text">
+                <h1>VIGSEL</h1>
             </div>
         </div>
 
-        <div class="plats-kyrka">
-            <div class="plats-text">
+        <div class="plats" id="vigsel">
+            <div class="plats-text" id="info1">
                 <h4 class="plats-heading">VÄSTERLJUNGS KYRKA</h4>
                 <p class="plats-para">Vigseln kommer att hållas i Västerljungs kyrka och börjar klockan 14:00. Maecenas
                     consectetur arcu a varius eleifend. Integer ipsum tellus, consectetur in aliquam vel, ornare ut
                     dolor. Donec volutpat nisi pulvinar leo posuere, vitae varius diam tincidunt.</p>
             </div>
-            <div class="plats-karta">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2059.5455459452073!2d17.446858716055896!3d58.922279281518314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f38bbec0bd3c1%3A0xfc86f49dd58127f2!2sV%C3%A4sterljungs%20kyrka!5e0!3m2!1ssv!2sse!4v1639929815925!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="plats-karta" id="info2">
+                <iframe class="img map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2059.5455459452073!2d17.446858716055896!3d58.922279281518314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f38bbec0bd3c1%3A0xfc86f49dd58127f2!2sV%C3%A4sterljungs%20kyrka!5e0!3m2!1ssv!2sse!4v1639929815925!5m2!1ssv!2sse" style="border:0;" allowfullscreen="" loading="eager"></iframe>
             </div>
         </div>
 
         <div class="image-banner">
             <img class="img" src="imgs/fest.jpg">
-            <div class="hero-text">
+            <div class="banner-text">
                 <h1>FEST</h1>
             </div>
         </div>
 
-        <div class="plats-kyrka">
-            <div class="plats-karta">
-                <a href="https://goo.gl/maps/m43WQKQJPd33Bs7C9" target="_blank"><img class="img"
-                        src="imgs/lokalen-plats.jpg"></a>
+        <div class="plats" id="fest">
+            <div class="plats-karta" id="info3">
+                <iframe class="img map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8250.231445568696!2d17.437994!3d58.87175800000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8511d1c73871d49c!2sBergs%20G%C3%A5rd%20Trosa!5e0!3m2!1ssv!2sse!4v1640004981946!5m2!1ssv!2sse" style="border:0;" allowfullscreen="" loading="eager"></iframe>  
             </div>
-            <div class="plats-text">
+            <div class="plats-text" id="info4">
                 <h4 class="plats-heading">BERGS GÅRD</h4>
                 <p class="plats-para">Efter vigseln beger vi oss till festen som kommer att hålla till på Bergs Gård.
                     Här blir det brudskål, trerätters middag och bröllopstårta. Det blir även dans, tal och andra
@@ -79,12 +94,12 @@
 
         <div class="image-banner">
             <img class="img" src="imgs/FAQ.jpg">
-            <div class="hero-text">
+            <div class="banner-text">
                 <h1>FAQ</h1>
             </div>
         </div>
 
-        <div class="FAQ">
+        <div class="FAQ" id="faq">
             <h4 class="FAQ-heading">Finns det någon klädkod?</h4>
             <p class="FAQ-para">Suspendisse potenti. Sed luctus metus et dui egestas, quis aliquam nibh ultricies. Morbi
                 ut dolor sit amet eros ultricies ultrices vel in enim. Praesent finibus malesuada vulputate. Maecenas in
@@ -119,9 +134,53 @@
 
         <div class="image-banner">
             <img class="img" src="imgs/brudfölje.jpg">
-            <div class="hero-text ">
+            <div class="hero-text-brudfölje">
                 <h1>BRUDFÖLJE +</h1>
                 <h1>KONTAKTUPPGIFTER</h1>
+            </div>
+        </div>
+
+        <div class="Kontaktuppgifter" id="kontakt">
+            <div class="column">
+                <div class="row">
+                    <h4>Toastmaster</h4>
+                    <p>David Hagstedt</p>
+                    <p>+46 73-751 93 12</p>
+                </div>
+                <div class="row">
+                    <h4>Brudens mor & far</h4>
+                    <p>Annika Hagstedt</p>
+                    <p>+46 70-674 36 61</p>
+                </div>
+                <div class="row">
+                    <p>Lasse Hagstedt</p>
+                    <p>+46 70-143 85 21</p>
+                </div>
+                <div class="row">
+                    <h4>Brudgummens mor</h4>
+                    <p>Susan Hultman</p>
+                    <p>+46 70-797 65 90</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="row">
+                    <h4>Brudtärnor</h4>
+                    <p>Evelina Benedicks</p>
+                    <p>+46 76-014 51 59</p>
+                </div>
+                <div class="row">
+                    <p>Astrid Sanchez Bergman</p>
+                    <p>+46 70-742 36 11</p>
+                </div>
+                <div class="row">
+                    <h4>Marskalker</h4>
+                    <p>Jesper Altin</p>
+                    <p>+46 70-767 29 24</p>
+                </div>
+                <div class="row">
+                    <p>Tobias Altin</p>
+                    <p>+46 73-694 66 40</p>
+                </div>
             </div>
         </div>
 

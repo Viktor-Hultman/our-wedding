@@ -62,6 +62,79 @@ body {
     color: var(--light-black);
 }
 
+.hamburger {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 5px;
+}
+
+.hamburger:hover {
+    filter: invert(0.2);
+    cursor: pointer;
+}
+
+.menu-exit {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.menu-exit:hover {
+    filter: invert(0.5);
+    cursor: pointer;
+}
+
+.hamburger-menu {
+    display: none;
+    right: 0px;
+    top: -800px;
+    z-index: 1;
+    position: fixed;
+    list-style-type: none;
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.dropdown-animation {
+    animation: dropping 0.4s forwards;
+}
+
+@keyframes dropping {
+    from { top: -800px; }
+    to {top: 0px;}
+}
+
+.reset-animation {
+    animation: reset 0.4s forwards;
+}
+
+@keyframes reset {
+    from { top: 0px; }
+    to {top: -800px;}
+}
+
+
+.burger-item {
+    margin-top: 30px;
+    padding: 5px;
+    border-bottom: 2px solid #fff;
+    transition: 0.3s;
+}
+
+.burger-item:hover {
+    border-color: var(--light-black);
+    cursor: pointer;
+}
+
 .hero-container {
     position: relative;
     text-align: center;
@@ -73,6 +146,7 @@ body {
 
 .img {
     max-width: 100%;
+    min-height: 100px;
     object-fit: cover;
 }
 
@@ -86,6 +160,19 @@ body {
 }
 
 .hero-text h1, p {
+    font-weight: lighter;
+}
+
+.banner-text {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, 20%);
+}
+
+.banner-text h1, p {
     font-weight: lighter;
 }
 
@@ -111,16 +198,16 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0px 5%;
+    padding: 20px 5%;
 }
 
 .content-para {
-    font-size: 14px;
+    font-size: 16px;
     padding: 6% 0px;
 }
 
 .content-link {
-    font-size: 14px;
+    font-size: 16px;
     border: 1.5px solid var(--light-black);
     padding: 8px 15px;
     transition: 0.3s;
@@ -142,6 +229,10 @@ body {
 /* Anmälan */
 .anmälan-container {
     width: 60%;
+}
+
+.anmälan-info {
+    margin-bottom: 15px;
 }
 
 .anmälan-para {
@@ -235,7 +326,7 @@ input::placeholder {
     color: var(--light-black);
     background: white;
     transition: 0.3s;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .anmälan-button:hover {
@@ -396,7 +487,7 @@ input::placeholder {
     text-align: center;
 }
 
-.plats-kyrka {
+.plats {
     display: flex;
     justify-content: space-between;
     padding: 60px 0px;
@@ -419,6 +510,11 @@ input::placeholder {
     width: 45%;
 }
 
+.map {
+    width: 100%;
+    min-height: 300px;
+}
+
 .FAQ {
     display: flex;
     flex-direction: column;
@@ -438,6 +534,26 @@ input::placeholder {
     margin-top: 10px;
     font-style: italic;
 }
+
+.hero-text-brudfölje {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, 0%);
+}
+
+.hero-text-brudfölje h1 {
+    font-weight: lighter;
+}
+
+.Kontaktuppgifter {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
 
 /* Information */
 
@@ -485,7 +601,7 @@ input::placeholder {
     }
 
     .content-text {
-        padding: 0px 15%;
+        padding: 20px 15%;
     }
 
     #cont1 {
@@ -507,6 +623,27 @@ input::placeholder {
         order: 6;
     }
 
+    .plats {
+        flex-direction: column;
+    }
+
+    .plats-karta {
+        width: 100%;
+    }
+
+    .plats-text {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    #info3 {
+        order: 8
+    }
+
+    #info4 {
+        order: 7
+    }
+
     .footer {
         justify-content: center;
     }
@@ -521,6 +658,11 @@ input::placeholder {
 @media screen and (max-width: 550px) {
     .site-container {
         margin-bottom: 0px;
+        width: 100%;
+    }
+
+    .information-container {
+        width: 100%;
     }
 
     .content {
@@ -528,11 +670,7 @@ input::placeholder {
     }
 
     .content-text {
-        padding: 0px 7%;
-    }
-
-    .site-container {
-        width: 100%;
+        padding: 20px 7%;
     }
 
     .anmälan-form {
@@ -542,5 +680,47 @@ input::placeholder {
     .anmälan-info {
         padding: 0px 5%;
     }
+
+    .anchor-tag-item {
+        font-size: 16px;
+        margin: 0px 7px;
+    }
+    
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .banner-text h1 {
+        font-size: 24px;
+    }
+    
+    .hero-text-brudfölje {
+        top: 35%;
+    }
+
+    .hero-text-brudfölje h1 {
+        font-size: 24px;
+    }
+
+    .map {
+        min-height: 200px;
+    }
 }
+
+
+@media screen and (max-width: 500px) {
+    .nav-list {
+        display: none;
+    }
+
+    .hero-container {
+        margin: 0px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+
 /* Media querys */
