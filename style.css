@@ -7,7 +7,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;  
 }
 
 body {
@@ -16,6 +16,10 @@ body {
     flex-direction: column;
     align-items: center;
     color: var(--light-black);
+}
+
+p {
+    line-height: 1.6;
 }
 
 .nav-bar {
@@ -198,12 +202,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 5%;
+    padding: 0px 5%;
 }
 
 .content-para {
     font-size: 16px;
     padding: 6% 0px;
+    text-align: left;
 }
 
 .content-link {
@@ -224,6 +229,8 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+
 
 
 /* Anmälan */
@@ -360,6 +367,7 @@ input::placeholder {
 .önskelista-para {
     text-align: center;
     margin: 20px 0px;
+    text-align: left;
 }
 
 .align-end {
@@ -502,12 +510,25 @@ input::placeholder {
     width: 45%;
 }
 
+.plats-para {
+    text-align: left;
+}
+
 .plats-heading {
     margin-bottom: 10px;
 }
 
 .plats-karta {
     width: 45%;
+}
+
+.left-aligned {
+    text-align: left;
+    font-weight: bold;
+}
+
+.boende-para {
+    margin-bottom: 20px;
 }
 
 .map {
@@ -551,9 +572,129 @@ input::placeholder {
 .Kontaktuppgifter {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 30px 0px;
 }
 
+.kontakt-column {
+    width: 35%;
+    padding: 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kontakt-row {
+    text-align: center;
+    padding: 0px 20px;
+    margin-bottom: 15px;
+}
+
+.kontakt-row h4 {
+    margin-bottom: 5px;
+}
+
+/* Slideshow */
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 45%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* Slideshow */
 
 /* Information */
 
@@ -588,7 +729,20 @@ input::placeholder {
 }
 /* Footer */
 
-/* At 768 width or smaller the burger menu should show instead of the navbar */
+@media screen and (max-width: 1250px) {
+    .boende-container {
+        flex-direction: column;
+    }
+
+    .slideshow-container {
+        width: 100%;
+    }
+
+    .boende-text {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+}
 
 /* Media querys */
 @media screen and (max-width: 1040px) {
@@ -642,6 +796,10 @@ input::placeholder {
 
     #info4 {
         order: 7
+    }
+
+    .kontakt-column {
+        width: 45%;
     }
 
     .footer {
@@ -705,6 +863,19 @@ input::placeholder {
     .map {
         min-height: 200px;
     }
+
+    .Kontaktuppgifter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kontakt-column {
+        width: 80%;
+    }
+
+    .sortering-div {
+        padding-right: 10px;
+    }
 }
 
 
@@ -719,6 +890,21 @@ input::placeholder {
 
     .hamburger {
         display: block;
+    }
+
+    .item-pris {
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .item-produkt {
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .item-insköpställen {
+        padding: 5px;
+        font-size: 15px;
     }
 }
 
