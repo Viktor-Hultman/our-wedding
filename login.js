@@ -3,6 +3,10 @@ function toSite(string) {
     window.location.href = fullPage
 }
 
+if(localStorage.getItem('logedIn') == "true") {
+    toSite("index")
+}
+
 let rightPassword = "XH3L8"
 
 let passwordInput = document.querySelector("#password-input")
