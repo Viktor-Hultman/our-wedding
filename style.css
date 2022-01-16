@@ -11,6 +11,7 @@
 }
 
 body {
+    min-height: 100vh;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -243,7 +244,7 @@ p {
 }
 
 .anmälan-para {
-    text-align: center;
+    text-align: left;
     margin: 20px 0px;
 }
 
@@ -254,6 +255,10 @@ p {
 #antal {
     margin-top: 5px;
     margin-bottom: 20px;
+}
+
+.vilken-person {
+    margin: 10px 0px;
 }
 
 .anmälan-form input {
@@ -308,7 +313,6 @@ input::placeholder {
 }
 
 .godkänn-filmning-container {
-    height: 30px;
     display: flex;
     align-items: center;
     margin-bottom: 30px;
@@ -348,6 +352,13 @@ input::placeholder {
 
 .hide {
     display: none;
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: rgb(192, 192, 192);
+    margin: 0px 0px 20px 0px;
 }
 
 /* Anmälan */
@@ -674,6 +685,60 @@ input::placeholder {
 
 /* Information */
 
+#password-input {
+    height: 20px;
+    padding: 5px 0px;
+    margin: 5px 30px 20px 30px;
+    font: small-caption;
+    font-size: 16px;
+}
+
+#login-button {
+    width: 90px;
+    height: 30px;
+    border: 1.5px solid var(--light-black);
+    color: var(--light-black);
+    background: white;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+#login-button:hover {
+    cursor: pointer;
+    background: var(--light-black);
+    color:white;
+}
+
+#login-button:active {
+    border-color: white;
+}
+
+.login-button-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    height: 80vh;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form label {
+    text-align: left;
+    margin: 80px 30px 0px 30px;
+}
+
+.login-heading {
+    margin-top: 20px;
+}
+
 /* Footer */
 .footer {
     width: 100%;
@@ -886,6 +951,17 @@ input::placeholder {
     .anchor-tag-item {
         font-size: 14px;
         margin: 0px 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .login-heading {
+        font-size: 26px;
+    }
+
+    .login-datum {
+        font-size: 22px;
     }
 }
 

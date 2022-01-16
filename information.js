@@ -3,6 +3,10 @@ function toSite(string) {
     window.location.href = fullPage
 }
 
+if(localStorage.getItem('logedIn') == null) {
+  toSite("login")
+}
+
 let menu = document.querySelector(".hamburger-menu")
 let burger = document.querySelector(".hamburger")
 let closeMenu = document.querySelector(".menu-exit")

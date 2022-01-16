@@ -3,6 +3,10 @@ function toSite(string) {
     window.location.href = fullPage
 }
 
+if(localStorage.getItem('logedIn') == null) {
+    toSite("login")
+}
+
 let menu = document.querySelector(".hamburger-menu")
 let burger = document.querySelector(".hamburger")
 let closeMenu = document.querySelector(".menu-exit")
@@ -60,28 +64,24 @@ let person5 = {
 };
 
 let telefonnummer = ""
+let låtönskan = ""
 let godkänt = null
 let antal = 1
 
-localStorage.setItem("antal", 1)
-localStorage.setItem("person-1", JSON.stringify(person1))
-localStorage.setItem("person-2", JSON.stringify(person2))
-localStorage.setItem("person-3", JSON.stringify(person3))
-localStorage.setItem("person-4", JSON.stringify(person4))
-localStorage.setItem("person-5", JSON.stringify(person5))
-localStorage.setItem("telefonnummer", telefonnummer)
-localStorage.setItem("godkänt", godkänt)
 
 antalSelect.addEventListener("change", function (){
     let antalVal = Number(antalSelect.value)
     for(let i = 0; i < personForms.length; i++){
         if(i < antalVal) {
-            localStorage.setItem("antal", antalVal)
             personForms[i].classList.remove("hide")
         } else {
-            localStorage.setItem("antal", antalVal)
             personForms[i].classList.add("hide")
         }
+    }
+    if(antalSelect.value == "1"){
+        document.querySelectorAll(".vilken-person")[0].classList.add("hide")
+    } else {
+        document.querySelectorAll(".vilken-person")[0].classList.remove("hide")
     }
     antal = antalVal
 })
@@ -323,10 +323,15 @@ person5SovPlatsNej.addEventListener("click", function (){
 
 // Person 5 ^^
 
+let låtÖnskan = document.querySelector("#låtÖnskan")
+
+låtÖnskan.addEventListener("input", function (){
+    låtönskan = låtÖnskan.value
+})
+
 let telefonInput = document.querySelector("#telefon")
 
 telefonInput.addEventListener("input", function (){
-    localStorage.setItem("telefonnummer", telefonInput.value)
     telefonnummer = telefonInput.value
 })
 
@@ -335,7 +340,6 @@ let godkännelse = document.querySelector(".filmning-ja")
 godkännelse.addEventListener("click", function (){
     godkänt = !godkänt;
     this.firstElementChild.classList.toggle("selected")
-    localStorage.setItem("godkänt", godkänt)
 })
 
 let anmälanBtn = document.querySelector(".anmälan-button")
@@ -358,7 +362,7 @@ function sendEmail() {
             To: "viktor@gmail.com",
             From: "guest@gmail.com",
             Subject: "Bröllopsanmälan",
-            Body: "Antal: " + antal + "<br>" + "<br>" + "Namn: " + person1.person_1_namn + "<br>" + "Specialkost/Allergi: " + person1.person_1_matpref + "<br>" + "Alkohol: " + person1.person_1_alkohol + "<br>" + "Sovplats: " + person1.person_1_sovplats + "<br>" + "<br>" + "TelefonNummer: " + telefonnummer
+            Body: "Antal: " + antal + "<br>" + "<br>" + "Namn: " + person1.person_1_namn + "<br>" + "Specialkost/Allergi: " + person1.person_1_matpref + "<br>" + "Alkohol: " + person1.person_1_alkohol + "<br>" + "Sovplats: " + person1.person_1_sovplats + "<br>" + "<br>" + "Låtönskan: " + låtönskan + "<br>" + "<br>" + "TelefonNummer: " + telefonnummer
         })
     }
 
@@ -370,7 +374,7 @@ function sendEmail() {
             To: "viktor@gmail.com",
             From: "guest@gmail.com",
             Subject: "Bröllopsanmälan",
-            Body: "Antal: " + antal + "<br>" + "<br>" + "Person 1" + "<br>" + "Namn: " + person1.person_1_namn + "<br>" + "Specialkost/Allergi: " + person1.person_1_matpref + "<br>" + "Alkohol: " + person1.person_1_alkohol + "<br>" + "Sovplats: " + person1.person_1_sovplats + "<br>" + "<br>" + "Person 2" + "<br>" + "Namn: " + person2.person_2_namn + "<br>" + "Specialkost/Allergi: " + person2.person_2_matpref + "<br>" + "Alkohol: " + person2.person_2_alkohol + "<br>" + "Sovplats: " + person2.person_2_sovplats + "<br>" + "Telefonnummer: " + telefonnummer
+            Body: "Antal: " + antal + "<br>" + "<br>" + "Person 1" + "<br>" + "Namn: " + person1.person_1_namn + "<br>" + "Specialkost/Allergi: " + person1.person_1_matpref + "<br>" + "Alkohol: " + person1.person_1_alkohol + "<br>" + "Sovplats: " + person1.person_1_sovplats + "<br>" + "<br>" + "Person 2" + "<br>" + "Namn: " + person2.person_2_namn + "<br>" + "Specialkost/Allergi: " + person2.person_2_matpref + "<br>" + "Alkohol: " + person2.person_2_alkohol + "<br>" + "Sovplats: " + person2.person_2_sovplats + "<br>" + "<br>" + "Låtönskan: " + låtönskan + "<br>" + "<br>" + "Telefonnummer: " + telefonnummer
         })
     }
 
@@ -382,7 +386,7 @@ function sendEmail() {
             To: "viktor@gmail.com",
             From: "guest@gmail.com",
             Subject: "Bröllopsanmälan",
-            Body: "Antal: " + antal + "<br>" + "<br>" + "Person 1" + "<br>" + "Namn: " + person1.person_1_namn + "<br>" + "Specialkost/Allergi: " + person1.person_1_matpref + "<br>" + "Alkohol: " + person1.person_1_alkohol + "<br>" + "Sovplats: " + person1.person_1_sovplats + "<br>" + "<br>" + "Person 2" + "<br>" + "Namn: " + person2.person_2_namn + "<br>" + "Specialkost/Allergi: " + person2.person_2_matpref + "<br>" + "Alkohol: " + person2.person_2_alkohol + "<br>" + "Sovplats: " + person2.person_2_sovplats + "<br>" + "<br>" + "Person 3" + "<br>" + "Namn: " + person3.person_3_namn + "<br>" + "Specialkost/Allergi: " + person3.person_3_matpref + "<br>" + "Alkohol: " + person3.person_3_alkohol + "<br>" + "Sovplats: " + person3.person_3_sovplats + "<br>" + "<br>" + "Telefonnummer: " + telefonnummer
+            Body: "Antal: " + antal + "<br>" + "<br>" + "Person 1" + "<br>" + "Namn: " + person1.person_1_namn + "<br>" + "Specialkost/Allergi: " + person1.person_1_matpref + "<br>" + "Alkohol: " + person1.person_1_alkohol + "<br>" + "Sovplats: " + person1.person_1_sovplats + "<br>" + "<br>" + "Person 2" + "<br>" + "Namn: " + person2.person_2_namn + "<br>" + "Specialkost/Allergi: " + person2.person_2_matpref + "<br>" + "Alkohol: " + person2.person_2_alkohol + "<br>" + "Sovplats: " + person2.person_2_sovplats + "<br>" + "<br>" + "Person 3" + "<br>" + "Namn: " + person3.person_3_namn + "<br>" + "Specialkost/Allergi: " + person3.person_3_matpref + "<br>" + "Alkohol: " + person3.person_3_alkohol + "<br>" + "Sovplats: " + person3.person_3_sovplats + "<br>" + "<br>" + "Låtönskan: " + låtönskan + "<br>" + "<br>" + "Telefonnummer: " + telefonnummer
         })
     }
 
@@ -394,7 +398,7 @@ function sendEmail() {
             To: "viktor@gmail.com",
             From: "guest@gmail.com",
             Subject: "Bröllopsanmälan",
-            Body: "Antal: " + antal + "<br>" + "<br>" + "Person 1" + "<br>" + "Namn: " + person1.person_1_namn + "<br>" + "Specialkost/Allergi: " + person1.person_1_matpref + "<br>" + "Alkohol: " + person1.person_1_alkohol + "<br>" + "Sovplats: " + person1.person_1_sovplats + "<br>" + "<br>" + "Person 2" + "<br>" + "Namn: " + person2.person_2_namn + "<br>" + "Specialkost/Allergi: " + person2.person_2_matpref + "<br>" + "Alkohol: " + person2.person_2_alkohol + "<br>" + "Sovplats: " + person2.person_2_sovplats + "<br>" + "<br>" + "Person 3" + "<br>" + "Namn: " + person3.person_3_namn + "<br>" + "Specialkost/Allergi: " + person3.person_3_matpref + "<br>" + "Alkohol: " + person3.person_3_alkohol + "<br>" + "Sovplats: " + person3.person_3_sovplats + "<br>" + "<br>" + "Person 4" + "<br>" + "Namn: " + person4.person_4_namn + "<br>" + "Specialkost/Allergi: " + person4.person_4_matpref + "<br>" + "Alkohol: " + person4.person_4_alkohol + "<br>" + "Sovplats: " + person4.person_4_sovplats + "<br>" + "Telefonnummer: " + telefonnummer 
+            Body: "Antal: " + antal + "<br>" + "<br>" + "Person 1" + "<br>" + "Namn: " + person1.person_1_namn + "<br>" + "Specialkost/Allergi: " + person1.person_1_matpref + "<br>" + "Alkohol: " + person1.person_1_alkohol + "<br>" + "Sovplats: " + person1.person_1_sovplats + "<br>" + "<br>" + "Person 2" + "<br>" + "Namn: " + person2.person_2_namn + "<br>" + "Specialkost/Allergi: " + person2.person_2_matpref + "<br>" + "Alkohol: " + person2.person_2_alkohol + "<br>" + "Sovplats: " + person2.person_2_sovplats + "<br>" + "<br>" + "Person 3" + "<br>" + "Namn: " + person3.person_3_namn + "<br>" + "Specialkost/Allergi: " + person3.person_3_matpref + "<br>" + "Alkohol: " + person3.person_3_alkohol + "<br>" + "Sovplats: " + person3.person_3_sovplats + "<br>" + "<br>" + "Person 4" + "<br>" + "Namn: " + person4.person_4_namn + "<br>" + "Specialkost/Allergi: " + person4.person_4_matpref + "<br>" + "Alkohol: " + person4.person_4_alkohol + "<br>" + "Sovplats: " + person4.person_4_sovplats + "<br>" + "<br>" + "Låtönskan: " + låtönskan + "<br>" + "<br>" + "Telefonnummer: " + telefonnummer 
         })
     }
 
@@ -406,7 +410,7 @@ function sendEmail() {
             To: "viktor@gmail.com",
             From: "guest@gmail.com",
             Subject: "Bröllopsanmälan",
-            Body: "Antal: " + antal + "<br>" + "<br>" + "Person 1" + "<br>" + "Namn: " + person1.person_1_namn + "<br>" + "Specialkost/Allergi: " + person1.person_1_matpref + "<br>" + "Alkohol: " + person1.person_1_alkohol + "<br>" + "Sovplats: " + person1.person_1_sovplats + "<br>" + "<br>" + "Person 2" + "<br>" + "Namn: " + person2.person_2_namn + "<br>" + "Specialkost/Allergi: " + person2.person_2_matpref + "<br>" + "Alkohol: " + person2.person_2_alkohol + "<br>" + "Sovplats: " + person2.person_2_sovplats + "<br>" + "<br>" + "Person 3" + "<br>" + "Namn: " + person3.person_3_namn + "<br>" + "Specialkost/Allergi: " + person3.person_3_matpref + "<br>" + "Alkohol: " + person3.person_3_alkohol + "<br>" + "Sovplats: " + person3.person_3_sovplats + "<br>" + "<br>" + "Person 4" + "<br>" + "Namn: " + person4.person_4_namn + "<br>" + "Specialkost/Allergi: " + person4.person_4_matpref + "<br>" + "Alkohol: " + person4.person_4_alkohol + "<br>" + "Sovplats: " + person4.person_4_sovplats + "<br>" + "<br>" + "Person 5" + "<br>" + "Namn: " + person5.person_5_namn + "<br>" + "Specialkost/Allergi: " + person5.person_5_matpref + "<br>" + "Alkohol: " + person5.person_5_alkohol + "<br>" + "Sovplats: " + person5.person_5_sovplats + "<br>" + "Telefonnummer: " + telefonnummer
+            Body: "Antal: " + antal + "<br>" + "<br>" + "Person 1" + "<br>" + "Namn: " + person1.person_1_namn + "<br>" + "Specialkost/Allergi: " + person1.person_1_matpref + "<br>" + "Alkohol: " + person1.person_1_alkohol + "<br>" + "Sovplats: " + person1.person_1_sovplats + "<br>" + "<br>" + "Person 2" + "<br>" + "Namn: " + person2.person_2_namn + "<br>" + "Specialkost/Allergi: " + person2.person_2_matpref + "<br>" + "Alkohol: " + person2.person_2_alkohol + "<br>" + "Sovplats: " + person2.person_2_sovplats + "<br>" + "<br>" + "Person 3" + "<br>" + "Namn: " + person3.person_3_namn + "<br>" + "Specialkost/Allergi: " + person3.person_3_matpref + "<br>" + "Alkohol: " + person3.person_3_alkohol + "<br>" + "Sovplats: " + person3.person_3_sovplats + "<br>" + "<br>" + "Person 4" + "<br>" + "Namn: " + person4.person_4_namn + "<br>" + "Specialkost/Allergi: " + person4.person_4_matpref + "<br>" + "Alkohol: " + person4.person_4_alkohol + "<br>" + "Sovplats: " + person4.person_4_sovplats + "<br>" + "<br>" + "Person 5" + "<br>" + "Namn: " + person5.person_5_namn + "<br>" + "Specialkost/Allergi: " + person5.person_5_matpref + "<br>" + "Alkohol: " + person5.person_5_alkohol + "<br>" + "Sovplats: " + person5.person_5_sovplats + "<br>" + "<br>" + "Låtönskan: " + låtönskan + "<br>" + "<br>" + "Telefonnummer: " + telefonnummer
         })
     }
 }

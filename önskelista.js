@@ -3,6 +3,10 @@ function toSite(string) {
     window.location.href = fullPage
 }
 
+if(localStorage.getItem('logedIn') == null) {
+    toSite("login")
+}
+
 let menu = document.querySelector(".hamburger-menu")
 let burger = document.querySelector(".hamburger")
 let closeMenu = document.querySelector(".menu-exit")
@@ -24,10 +28,10 @@ closeMenu.addEventListener("click", function() {
 
 let önskelista = [
     {
-        "namn": "DYSON V8 DAMMSUGARE",
+        "namn": "DYSON DAMMSUGARE",
         "pris": 3390,
         "inköpsställe": "ELGIGANTEN",
-        "länk": "https://www.elgiganten.se/product/hem-och-hushall/dammsugare-och-rengoring/53306/dyson-v8-anima-sladdlos-skaftdammsugare-dy24836701?_gl=1*1xghidy*_up*MQ..&gclid=Cj0KCQiA5OuNBhCRARIsACgaiqXJmyDHA9FaL7iWNjLaOojwJfSdw0q8oe2Pwfyeiou2wRq0Ooeoo28aAvK3EALw_wcB&gclsrc=aw.ds"
+        "länk": "https://www.elgiganten.se/product/hem-och-hushall/dammsugare-och-rengoring/skaftdammsugare/370862/dyson-omni-glide-dammsugare-37013301-lila"
     },
     {
         "namn": "CIRRUS NO.2 HANDSTEAMER - SVART",
@@ -37,9 +41,9 @@ let önskelista = [
     },
     {
         "namn": "ARVET KOKKÄRL",
-        "pris": 2995,
-        "inköpsställe": "NK",
-        "länk": "https://www.nk.se/vargen--thor/arvet-grytset-3-delar-matt-svartmassing-v00012682?gclid=Cj0KCQiA5OuNBhCRARIsACgaiqX1vuJuG576R-LEMv_aYN1WN74Dxhs--6Uhv9Co2XYJJiYatnsKqqYaAhZ8EALw_wcB&ssw=1"
+        "pris": 3485,
+        "inköpsställe": "VARGEN & THOR",
+        "länk": "https://vargenthor.se/p/arvet-set-3st-kokkarl-i-mattsvart-massing/"
     },
     {
         "namn": "RW ARDEN BESTICKSETT",
