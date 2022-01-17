@@ -3,7 +3,7 @@ function toSite(string) {
     window.location.href = fullPage
 }
 
-if(localStorage.getItem('logedIn') == null) {
+if(localStorage.getItem('logedInHoglin') == null) {
     toSite("login")
 }
 

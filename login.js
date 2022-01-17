@@ -3,7 +3,7 @@ function toSite(string) {
     window.location.href = fullPage
 }
 
-if(localStorage.getItem('logedIn') == "true") {
+if(localStorage.getItem('logedInHoglinHoglin') == "true") {
     toSite("index")
 }
 
@@ -17,8 +17,8 @@ let message = document.querySelector("#validation-message")
 passwordInput.addEventListener("keypress", function(e) {
     if (e.key === 'Enter') {
         if(passwordInput.value == rightPassword) {
+            localStorage.setItem("logedInHoglin", true)
             toSite('index')
-            localStorage.setItem("logedIn", true)
         } else {
             message.classList.remove("hide")
         }
@@ -29,7 +29,7 @@ passwordInput.addEventListener("keypress", function(e) {
 loginButton.addEventListener("click", function() {
     if(passwordInput.value == rightPassword) {
         toSite('index')
-        localStorage.setItem("logedIn", true)
+        localStorage.setItem("logedInHoglin", true)
     } else {
         message.classList.remove("hide")
     }
