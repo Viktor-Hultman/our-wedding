@@ -3,7 +3,7 @@ function toSite(string) {
     window.location.href = fullPage
 }
 
-if(localStorage.getItem('logedInHoglinHoglin') == "true") {
+if(localStorage.getItem('logedInHoglin') == "true") {
     toSite("index")
 }
 
@@ -16,7 +16,8 @@ let message = document.querySelector("#validation-message")
 
 passwordInput.addEventListener("keypress", function(e) {
     if (e.key === 'Enter') {
-        if(passwordInput.value == rightPassword) {
+        let enteredPassword = passwordInput.value.toUpperCase()
+        if(enteredPassword == rightPassword) {
             localStorage.setItem("logedInHoglin", true)
             toSite('index')
         } else {
@@ -27,7 +28,8 @@ passwordInput.addEventListener("keypress", function(e) {
 })
 
 loginButton.addEventListener("click", function() {
-    if(passwordInput.value == rightPassword) {
+    let enteredPassword = passwordInput.value.toUpperCase()
+    if(enteredPassword == rightPassword) {
         toSite('index')
         localStorage.setItem("logedInHoglin", true)
     } else {
