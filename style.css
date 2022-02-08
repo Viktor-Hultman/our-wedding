@@ -39,6 +39,7 @@ p {
     margin-top: 10px;
     margin-left: 20px;
     padding-bottom: 8px;
+    font-weight: 500;
     font-size: 14px;
     color: #fff;
     transition: 0.3s;
@@ -97,7 +98,7 @@ p {
 .hamburger-menu {
     display: none;
     right: 0px;
-    top: -800px;
+    top: -2000px;
     z-index: 1;
     position: fixed;
     list-style-type: none;
@@ -111,21 +112,21 @@ p {
 }
 
 .dropdown-animation {
-    animation: dropping 0.4s forwards;
+    animation: dropping 1s forwards;
 }
 
 @keyframes dropping {
-    from { top: -800px; }
+    from { top: -2000px; }
     to {top: 0px;}
 }
 
 .reset-animation {
-    animation: reset 0.4s forwards;
+    animation: reset 1s forwards;
 }
 
 @keyframes reset {
     from { top: 0px; }
-    to {top: -800px;}
+    to {top: -2000px;}
 }
 
 
@@ -189,6 +190,17 @@ p {
     font-size: 46px;
 }
 
+.heading-container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.heading-container h2 {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
 .site-container {
     width: 90%;
     margin: 5% 0px;
@@ -244,11 +256,14 @@ p {
 
 /* Anmälan */
 .anmälan-container {
-    width: 60%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
 }
 
 .anmälan-info {
     margin-bottom: 15px;
+    width: 80%;
 }
 
 .anmälan-para {
@@ -257,7 +272,10 @@ p {
 }
 
 .anmälan-form {
-    width: 100%;
+    width: 60%;
+    padding: 50px;
+    margin-bottom: 30px;
+    background: #f0f0f0;
 }
 
 #antal {
@@ -275,6 +293,7 @@ p {
     padding: 5px 0px;
     margin-bottom: 20px;
     margin-top: 5px;
+    border: 1.5px solid #cacaca;
 }
 
 input::placeholder {
@@ -296,7 +315,7 @@ input::placeholder {
 .select-box-outer {
     min-width: 16px;
     height: 16px;
-    border: 1.5px solid var(--light-black);
+    border: 1.5px solid #cacaca;
     border-radius: 1.5px;
     margin: 0px 30px 0px 5px;
     display: flex;
@@ -343,16 +362,15 @@ input::placeholder {
     width: 90px;
     height: 30px;
     border: 1.5px solid var(--light-black);
-    color: var(--light-black);
-    background: white;
+    background: var(--light-black);
+    color:white;
     transition: 0.3s;
-    margin-bottom: 20px;
 }
 
 .anmälan-button:hover {
     cursor: pointer;
-    background: var(--light-black);
-    color:white;
+    color: var(--light-black);
+    background: white;
 }
 
 .anmälan-button:active {
@@ -488,7 +506,7 @@ input::placeholder {
 }
 
 .anchor-tags {
-    margin: 50px 0px;
+    margin: 0px 0px 50px 0px;
 }
 
 .anchor-tag-list {
@@ -867,6 +885,11 @@ input::placeholder {
     }
 }
 
+@media screen and (min-width: 700px) {
+    .hero-text{
+        top: 50%;
+    }
+}
 
 
 @media screen and (max-width: 550px) {
@@ -883,10 +906,6 @@ input::placeholder {
         padding: 20px 7%;
     }
 
-    .anmälan-form {
-        padding: 0px 5%;
-    }
-
     .anmälan-info {
         padding: 0px 5%;
     }
@@ -897,6 +916,10 @@ input::placeholder {
     }
     
     .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .heading-container h2 {
         font-size: 30px;
     }
 
@@ -962,6 +985,10 @@ input::placeholder {
     .anchor-tag-item {
         font-size: 14px;
         margin: 0px 5px;
+    }
+
+    .content {
+        height: 300px;
     }
 }
 

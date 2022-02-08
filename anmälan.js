@@ -68,6 +68,7 @@ let låtönskan = ""
 let godkänt = null
 let antal = 1
 
+let spanID = document.querySelector('.spanID')
 
 antalSelect.addEventListener("change", function (){
     let antalVal = Number(antalSelect.value)
@@ -80,8 +81,10 @@ antalSelect.addEventListener("change", function (){
     }
     if(antalSelect.value == "1"){
         document.querySelectorAll(".vilken-person")[0].classList.add("hide")
+        spanID.innerText = "JAG"
     } else {
         document.querySelectorAll(".vilken-person")[0].classList.remove("hide")
+        spanID.innerText = "VI"
     }
     antal = antalVal
 })

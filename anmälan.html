@@ -35,16 +35,19 @@
         <li class="burger-item lined" onclick="toSite('anmälan')">ANMÄLAN</li>
     </ul>
     <div class="hero-container">
-        <img class="img" src="imgs/hoglin-brollop-start-banner.jpg">
+        <img class="img" src="imgs/Herobild_Viktor&Jessica_Hoglin.jpg">
         <div class="hero-text">
             <h1>VIKTOR & JESSICA</h1>
             <p>#HÖGLIN2022</p>
         </div>
     </div>
+    <div class="heading-container">
+        <h2>ANMÄLAN</h2>
+    </div>
     <div class="site-container anmälan-container">
         <div class="anmälan-info">
             <p class="anmälan-para">Här anmäler du dig som gäst på vårt bröllop. Anmäl dig senast den 6:e mars.
-                Är du inte anmäld innan dess registrerar vi din inbjudan som nekad.
+                Är du inte anmäld innan dess så tar vi det som att du inte har möjlighet att komma.
             </p>
             <p class="anmälan-para">
                 Vid tekniska frågor angående anmälan kontaktar du Viktor Hultman (+46 70-018 20 85).
@@ -53,7 +56,7 @@
 
         <form class="anmälan-form">
 
-            <label for="antal">HUR MÅNGA PERSONER VILL DU ANMÄLA?</label><br>
+            <label for="antal">HUR MÅNGA PERSONER VILL DU ANMÄLA? (OBS, ENDAST INBJUDNA)</label><br>
             <select name="antal" id="antal">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -82,7 +85,7 @@
                     </div>
                 </div>
 
-                <p class="dricka-para">ÖNSKAR DU BOKA SOVPLATS PÅ GÅRDEN? * (FÖRST TILL KVARN!)</p>
+                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN? * (FÖRST TILL KVARN!)</p>
                 <div class="dricka-select-container">
                     <p class="select-text">JA</p>
                     <div class="select-box-outer sovplats-ja">
@@ -117,7 +120,7 @@
                     </div>
                 </div>
 
-                <p class="dricka-para">ÖNSKAR DU BOKA SOVPLATS PÅ GÅRDEN? * (FÖRST TILL KVARN!)</p>
+                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN? * (FÖRST TILL KVARN!)</p>
                 <div class="dricka-select-container">
                     <p class="select-text">JA</p>
                     <div class="select-box-outer sovplats-ja">
@@ -152,7 +155,7 @@
                     </div>
                 </div>
 
-                <p class="dricka-para">ÖNSKAR DU BOKA SOVPLATS PÅ GÅRDEN? * (FÖRST TILL KVARN!)</p>
+                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN? * (FÖRST TILL KVARN!)</p>
                 <div class="dricka-select-container">
                     <p class="select-text">JA</p>
                     <div class="select-box-outer sovplats-ja">
@@ -187,7 +190,7 @@
                     </div>
                 </div>
 
-                <p class="dricka-para">ÖNSKAR DU BOKA SOVPLATS PÅ GÅRDEN? * (FÖRST TILL KVARN!)</p>
+                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN? * (FÖRST TILL KVARN!)</p>
                 <div class="dricka-select-container">
                     <p class="select-text">JA</p>
                     <div class="select-box-outer sovplats-ja">
@@ -237,7 +240,7 @@
             </div>
 
                                             
-            <label for="Låtval">VILL NI ÖNSKA LÅTAR TILL BRÖLLOPSFESTENS SPELLISTA, ANGE LÅTNAMN OCH ARTIST HÄR:</label><br>
+            <label for="Låtval">ÖNSKA EN LÅT TILL BRÖLLOPSFESTENS SPELLISTA, ANGE LÅTNAMN OCH ARTIST:</label><br>
             <input type="text" id="låtÖnskan" name="Låtval" placeholder="LÅTNAMN- OCH ARTIST">
 
 
@@ -248,16 +251,15 @@
                 <div class="select-box-outer filmning-ja">
                     <div class="select-box-inner"></div>
                 </div>
-                <p class="filmning-para">JAG/VI GODKÄNNER HÄRMED ATT BLI FILMADE OCH FOTOGRAFERADE UNDER BRÖLLOPSDAGEN*
+                <p class="filmning-para"><span class="spanID">JAG</span> GODKÄNNER HÄRMED ATT BLI FILMADE OCH FOTOGRAFERADE UNDER BRÖLLOPSDAGEN*
                 </p>
             </div>
+            <div class="anmälan-button-div">
+                <button class="anmälan-button">ANMÄL</button>
+                <span id="validation-message" class="hide">Se till att alla fält ovan har blivit ifyllda!</span>
+            </div>
         </form>
-        
 
-        <div class="anmälan-button-div">
-            <button class="anmälan-button">ANMÄL</button>
-            <span id="validation-message" class="hide">Se till att alla fält ovan har blivit ifyllda!</span>
-        </div>
 
     </div>
     <footer class="footer">
