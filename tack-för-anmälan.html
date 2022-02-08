@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <script src="önskelista.js" defer></script>
-    <title>Höglin 2022 - Önskelista</title>
+    <script src="anmälan.js" defer></script>
+    <title>Höglin 2022 - Anmälan</title>
 </head>
+
 <body>
     <nav class="nav-bar">
         <ul class="nav-list">
@@ -39,39 +41,22 @@
             <p>#HÖGLIN2022</p>
         </div>
     </div>
-    <div class="heading-container">
-        <h2>ÖNSKELISTA</h2>
-    </div>
-    <div class="site-container önskelista-container">
-        <div class="önskelista-info">
-            <p class="önskelista-para">
-                Det viktigaste för oss är självklart er närvaro och att ni är med och firar vår dag, men om ni även skulle vilja köpa en bröllopsgåva så finns här en lista på vad vi önskar oss, om ni behöver idéer. Om ni köper något från listan får ni gärna anmäla det genom att ringa eller sms:a Susan Hultman (tel: +46 70 797 65 90) så att hon kan plocka bort det från listan och vi därmed kan undvika att någon annan köper samma. <br><br>Brudparet har <strong>inte</strong> tillgång till denna lista och kan inte se hur den uppdateras.
+    <div class="site-container anmälan-container">
+        <div class="anmälan-info" id="ancor">
+            <p class="anmälan-para">
+                Tack för er anmälan, vi ser fram emot att ha er med på vår stora dag!<br>Om du vill hålla tal eller hitta på något annat roligt, vänligen kontakta toastmaster David på telefonnummer 0737519312
             </p>
         </div>
-        <div class="align-end">
-            <div class="sortering-div">
-                <label for="sortering">Sortera efter:</label>
-                <select name="sortering" class="sortering-select">
-                    <option style="display:none">Välj sortering</option>
-                    <option value="Pris - Stigande">Pris - Stigande</option>
-                    <option value="Pris - Fallande">Pris - Fallande</option>
-                </select>
-            </div>
-        </div>
-        <div class="list-titles">
-            <div class="item item-titles"><p class="item-produkt title">Produkt</p><p class="item-pris title">Pris</p><p class="item-inköpsställen title">Inköpsställen</p></div>
-        </div>
-        <ul class="list">
-            
-        </ul>
-
     </div>
     <footer class="footer">
         <ul class="footer-list">
             <li class="footer-item" onclick="toSite('index')"><span class="footer-text">STARTSIDA</span></li>
             <li class="footer-item" onclick="toSite('information')"><span class="footer-text">INFORMATION</span></li>
-            <li class="footer-item" onclick="toSite('anmälan')"><span class="footer-text">ANMÄLAN</span></li>
+            <li class="footer-item" onclick="toSite('önskelista')"><span class="footer-text">ÖNSKELISTA</span></li>
         </ul>
     </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
+
 </html>
