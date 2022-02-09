@@ -31,35 +31,35 @@ let personForms = document.querySelectorAll(".person")
 let person1 = {
     person_1_namn: "",
     person_1_matpref: "",
-    person_1_Alkoholfritt: null,
+    person_1_alkohol: null,
     person_1_sovplats: null,
 };
 
 let person2 = {
     person_2_namn: "",
     person_2_matpref: "",
-    person_2_Alkoholfritt: null,
+    person_2_alkohol: null,
     person_2_sovplats: null,
 };
 
 let person3 = {
     person_3_namn: "",
     person_3_matpref: "",
-    person_3_Alkoholfritt: null,
+    person_3_alkohol: null,
     person_3_sovplats: null,
 };
 
 let person4 = {
     person_4_namn: "",
     person_4_matpref: "",
-    person_4_Alkoholfritt: null,
+    person_4_alkohol: null,
     person_4_sovplats: null,
 };
 
 let person5 = {
     person_5_namn: "",
     person_5_matpref: "",
-    person_5_Alkoholfritt: null,
+    person_5_alkohol: null,
     person_5_sovplats: null,
 };
 
