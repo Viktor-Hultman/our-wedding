@@ -379,6 +379,10 @@ input::placeholder {
     border-color: white;
 }
 
+.red {
+    color: rgb(255, 35, 35);
+}
+
 #validation-message {
     margin-top: 20px;
 }

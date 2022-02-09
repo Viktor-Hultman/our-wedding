@@ -81,10 +81,10 @@ antalSelect.addEventListener("change", function (){
     }
     if(antalSelect.value == "1"){
         document.querySelectorAll(".vilken-person")[0].classList.add("hide")
-        spanID.innerText = "JAG"
+        spanID.innerText = "JAG GODKÄNNER HÄRMED ATT BLI FILMAD OCH FOTOGRAFERAD UNDER BRÖLLOPSDAGEN"
     } else {
         document.querySelectorAll(".vilken-person")[0].classList.remove("hide")
-        spanID.innerText = "VI"
+        spanID.innerText = "VI GODKÄNNER HÄRMED ATT BLI FILMADE OCH FOTOGRAFERADE UNDER BRÖLLOPSDAGEN"
     }
     antal = antalVal
 })
