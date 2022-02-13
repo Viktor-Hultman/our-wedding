@@ -47,7 +47,7 @@
     <div class="site-container anmälan-container">
         <div class="anmälan-info">
             <p class="anmälan-para">Här anmäler du dig som gäst på vårt bröllop. Anmäl dig senast den 6:e mars.
-                Är du inte anmäld innan dess så tar vi det som att du inte har möjlighet att komma.
+                Om du inte har möjlighet att delta, vänligen anmäl det i <a class="form-länk" href="#ej-delta-form">formuläret längst ner på denna sida.</a>
             </p>
             <p class="anmälan-para">
                 Vid tekniska frågor angående anmälan kontaktar du Viktor Hultman (+46 70-018 20 85).
@@ -55,7 +55,6 @@
         </div>
 
         <form class="anmälan-form">
-
             <label for="antal">HUR MÅNGA PERSONER VILL DU ANMÄLA? (OBS, ENDAST INBJUDNA)</label><br>
             <select name="antal" id="antal">
                 <option value="1">1</option>
@@ -258,6 +257,18 @@
         <div class="anmälan-button-div">
             <button class="anmälan-button">ANMÄL</button>
             <span id="validation-message" class="hide red">Se till att alla fält markerade med en * har blivit ifyllda!</span>
+        </div>
+
+        <div class="ej-delta-info">
+            <p class="ej-delta-text">Här ska du som inte kan delta ange ditt namn</p>
+        </div>
+        <form class="ej-delta-form" id="ej-delta-form">
+            <label for="Namn&Efternamn">FÖR- OCH EFTERNAMN</label><br>
+            <input type="text" id="deltar-ej-namn" name="Namn&Efternamn" placeholder="FÖR- OCH EFTERNAMN"><br>
+        </form>
+        <div class="anmälan-button-div">
+            <button class="deltar-ej-button">SKICKA</button>
+            <span id="un-validation-message" class="hide red">Se till att fältet ovan är ifyllt med namnet på den som inte kan delta.</span>
         </div>
 
 

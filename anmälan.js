@@ -485,3 +485,34 @@ anmälanBtn.addEventListener("click", function () {
         }
     }
 })
+
+let beskedText = document.createElement("p");
+beskedText.innerHTML = "Tack för ert besked, vad tråkigt att ni inte kan komma.";
+
+let ejDeltaInfo = document.querySelector(".ej-delta-info")
+let ejDeltaForm = document.querySelector(".ej-delta-form")
+let ejDeltaButton = document.querySelector(".deltar-ej-button")
+let ejDeltaInput = document.querySelector("#deltar-ej-namn")
+let ejDeltaValidationMsg = document.querySelector("#un-validation-message")
+
+ejDeltaButton.addEventListener("click", function () {
+    if (ejDeltaInput.value != ""){
+        console.log("Skicka");
+        Email.send({
+            Host: "smtp.mailtrap.io",
+            Username: "ff12ecb9d9dc09",
+            Password: "e7b06dd8e28b1d",
+            To: "viktor@gmail.com",
+            From: "guest@gmail.com",
+            Subject: "Kan ej komma",
+            Body: `Kan ej komma: ${ejDeltaInput.value}`
+        })
+        ejDeltaInfo.innerHTML = "";
+        ejDeltaForm.classList.add("hide");
+        ejDeltaButton.classList.add("hide");
+        ejDeltaValidationMsg.classList.add("hide");
+        ejDeltaInfo.appendChild(beskedText);
+    } else {
+        ejDeltaValidationMsg.classList.remove("hide")
+    }
+})

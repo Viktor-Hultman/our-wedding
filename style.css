@@ -258,6 +258,8 @@ p {
 .anmälan-container {
     width: 90%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
@@ -277,6 +279,24 @@ p {
     background: #f0f0f0;
 }
 
+.ej-delta-form {
+    width: 60%;
+    padding: 50px 50px 0px 50px;
+    background: #f0f0f0;
+}
+
+.ej-delta-info {
+    width: 60%;
+    padding: 50px 50px 0px 50px;
+    background: #f0f0f0;
+    margin-top: 50px;
+}
+
+.ej-delta-text {
+    font-weight: bold;
+    font-size: 18px;
+}
+
 #antal {
     margin-top: 5px;
     margin-bottom: 20px;
@@ -287,6 +307,15 @@ p {
 }
 
 .anmälan-form input {
+    width: 100%;
+    height: 20px;
+    padding: 5px 0px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border: 1.5px solid #cacaca;
+}
+
+.ej-delta-form input {
     width: 100%;
     height: 20px;
     padding: 5px 0px;
@@ -377,6 +406,38 @@ input::placeholder {
 
 .anmälan-button:active {
     border-color: white;
+}
+
+.deltar-ej-button {
+    width: 90px;
+    height: 30px;
+    border: 1.5px solid var(--light-black);
+    background: var(--light-black);
+    color:white;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.deltar-ej-button:hover {
+    cursor: pointer;
+    color: var(--light-black);
+    background: white;
+}
+
+.deltar-ej-button:active {
+    border-color: white;
+}
+
+.form-länk {
+    font-weight: bold;
+}
+
+.form-länk:link {
+    color: var(--light-black);
+}
+
+.form-länk:visited {
+    color: var(--light-black);
 }
 
 .red {
