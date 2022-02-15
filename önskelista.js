@@ -5,7 +5,6 @@ let önskelista = [
         "inköpsställe": "ELGIGANTEN",
         "länk": "https://www.elgiganten.se/product/hem-och-hushall/dammsugare-och-rengoring/skaftdammsugare/370862/dyson-omni-glide-dammsugare-37013301-lila",
         "harLänk": true,
-        "tillgänglig": true,
         "tillgänglig": true
     },
     {
