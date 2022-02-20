@@ -44,9 +44,6 @@
     <div class="heading-container">
         <h2>ANMÄLAN</h2>
     </div>
-    <div class="anmälan-tec-info">
-        <p class="anmälan-para">Vi har för tillfället problem med anmälningsformuläret, kom gärna tillbaka på måndag för att anmäla dig!</p>
-    </div>
     <div class="site-container anmälan-container">
         <div class="anmälan-info">
             <p class="anmälan-para">Här anmäler du dig som gäst på vårt bröllop. Anmäl dig senast den 6:e mars.
@@ -57,7 +54,22 @@
             </p>
         </div>
 
-        <form class="anmälan-form">
+        <form class="anmälan-form" action="https://submit-form.com/D0xEvRSx">
+            <input
+                type="hidden"
+                name="_feedback.success.title"
+                value="Er anmälan är nu motagen!"
+            />
+            <input
+                type="hidden"
+                name="_feedback.error.title"
+                value="Det blev något fel när vi skulle ta emot er anmälan!"
+            />
+            <input
+                type="hidden"
+                name="_feedback.error.message"
+                value="Testa gärna igen och kontakta brudparet om problem kvarstår."
+            />
             <label for="antal">HUR MÅNGA PERSONER VILL DU ANMÄLA? (OBS, ENDAST INBJUDNA)</label><br>
             <select name="antal" id="antal">
                 <option value="1">1</option>
@@ -66,213 +78,172 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select><br>
-
             <div class="person person-1">
                 <h4 class="vilken-person hide">Person 1</h4>
-                <label for="Namn">FÖR- OCH EFTERNAMN <span class="red">*</span></label><br>
-                <input type="text" id="Namn-1" name="Namn" placeholder="FÖR- OCH EFTERNAMN"><br>
+                <label for="Namn-1" class="required">FÖR- OCH EFTERNAMN</label><br>
+                <input class="text-input" type="text" id="Namn-1" name="Namn-1" placeholder="FÖR- OCH EFTERNAMN" required><br>
 
-                <label for="MatPref">SPECIALKOST/ALLERGIER <span class="red">*</span></label><br>
-                <input type="text" id="MatPref-1" name="MatPref" placeholder="SPECIALKOST/ALLERGIER">
+                <label for="MatPref-1" class="required">SPECIALKOST/ALLERGIER</label><br>
+                <input class="text-input" type="text" id="MatPref-1" name="MatPref-1" placeholder="SPECIALKOST/ALLERGIER" required>
+            
 
-                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN? <span class="red">*</span></p>
+                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN?<span class="red">*</span></p>
                 <div class="dricka-select-container">
-                    <p class="select-text">JA</p>
-                    <div class="select-box-outer alkohol-ja">
-                        <div class="select-box-inner"></div>
-                    </div>
-                    <p class="select-text">NEJ</p>
-                    <div class="select-box-outer alkohol-nej">
-                        <div class="select-box-inner"></div>
-                    </div>
+                    <label for="Alkoholfritt-1" class="select-text">JA</label>
+                    <input class="radio-button alkohol-ja-radio" type="radio" name="Alkoholfritt-1" value="JA" required>
+                    <label for="Alkoholfritt-1" class="select-text">NEJ</label>
+                    <input class="radio-button alkohol-nej-radio" type="radio" name="Alkoholfritt-1" value="NEJ" required>
                 </div>
 
-                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN? <span class="red">*</span> (FÖRST TILL KVARN!)</p>
+                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN?<span class="red">*</span> (FÖRST TILL KVARN!)</p>
                 <div class="dricka-select-container">
-                    <p class="select-text">JA</p>
-                    <div class="select-box-outer sovplats-ja">
-                        <div class="select-box-inner"></div>
-                    </div>
-                    <p class="select-text">NEJ</p>
-                    <div class="select-box-outer sovplats-nej">
-                        <div class="select-box-inner"></div>
-                    </div>
+                    <label for="Sovplats-1" class="select-text">JA</label>
+                    <input class="radio-button sovplats-ja-radio" type="radio" name="Sovplats-1" value="JA" required>
+                    <label for="Sovplats-1" class="select-text">NEJ</label>
+                    <input class="radio-button sovplats-nej-radio" type="radio" name="Sovplats-1" value="NEJ" required>
                 </div>
                 <div class="divider"></div>
             </div>
-
-            
+            <!-- End of person 1 -->
             <div class="person person-2 hide">
                 <h4 class="vilken-person">Person 2</h4>
-                <label for="Namn">FÖR- OCH EFTERNAMN <span class="red">*</span></label><br>
-                <input type="text" id="Namn-2" name="Namn" placeholder="FÖR- OCH EFTERNAMN"><br>
+                <label for="Namn-2" class="required">FÖR- OCH EFTERNAMN</label><br>
+                <input class="text-input" type="text" id="Namn-2" name="Namn-2" placeholder="FÖR- OCH EFTERNAMN"><br>
 
-                <label for="MatPref">SPECIALKOST/ALLERGIER <span class="red">*</span></label><br>
-                <input type="text" id="MatPref-2" name="MatPref" placeholder="SPECIALKOST/ALLERGIER">
+                <label for="MatPref-2" class="required">SPECIALKOST/ALLERGIER</label><br>
+                <input class="text-input" type="text" id="MatPref-2" name="MatPref-2" placeholder="SPECIALKOST/ALLERGIER">
+            
 
-                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN? <span class="red">*</span></p>
+                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN?<span class="red">*</span></p>
                 <div class="dricka-select-container">
-                    <p class="select-text">JA</p>
-                    <div class="select-box-outer alkohol-ja">
-                        <div class="select-box-inner"></div>
-                    </div>
-                    <p class="select-text">NEJ</p>
-                    <div class="select-box-outer alkohol-nej">
-                        <div class="select-box-inner"></div>
-                    </div>
+                    <label for="Alkoholfritt-2" class="select-text">JA</label>
+                    <input class="radio-button alkohol-ja-radio" type="radio" name="Alkoholfritt-2" value="JA">
+                    <label for="Alkoholfritt-2" class="select-text">NEJ</label>
+                    <input class="radio-button alkohol-nej-radio" type="radio" name="Alkoholfritt-2" value="NEJ">
                 </div>
 
-                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN? <span class="red">*</span> (FÖRST TILL KVARN!)</p>
+                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN?<span class="red">*</span> (FÖRST TILL KVARN!)</p>
                 <div class="dricka-select-container">
-                    <p class="select-text">JA</p>
-                    <div class="select-box-outer sovplats-ja">
-                        <div class="select-box-inner"></div>
-                    </div>
-                    <p class="select-text">NEJ</p>
-                    <div class="select-box-outer sovplats-nej">
-                        <div class="select-box-inner"></div>
-                    </div>
+                    <label for="Sovplats-2" class="select-text">JA</label>
+                    <input class="radio-button sovplats-ja-radio" type="radio" name="Sovplats-2" value="JA">
+                    <label for="Sovplats-2" class="select-text">NEJ</label>
+                    <input class="radio-button sovplats-nej-radio" type="radio" name="Sovplats-2" value="NEJ">
                 </div>
                 <div class="divider"></div>
             </div>
-
-
+            <!-- End of person 2 -->
             <div class="person person-3 hide">
                 <h4 class="vilken-person">Person 3</h4>
-                <label for="Namn">FÖR- OCH EFTERNAMN <span class="red">*</span></label><br>
-                <input type="text" id="Namn-3" name="Namn" placeholder="FÖR- OCH EFTERNAMN"><br>
+                <label for="Namn-3" class="required">FÖR- OCH EFTERNAMN</label><br>
+                <input class="text-input" type="text" id="Namn-3" name="Namn-3" placeholder="FÖR- OCH EFTERNAMN"><br>
 
-                <label for="MatPref">SPECIALKOST/ALLERGIER <span class="red">*</span></label><br>
-                <input type="text" id="MatPref-3" name="MatPref" placeholder="SPECIALKOST/ALLERGIER">
+                <label for="MatPref-3" class="required">SPECIALKOST/ALLERGIER</label><br>
+                <input class="text-input" type="text" id="MatPref-3" name="MatPref-3" placeholder="SPECIALKOST/ALLERGIER">
+            
 
-                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN? <span class="red">*</span></p>
+                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN?<span class="red">*</span></p>
                 <div class="dricka-select-container">
-                    <p class="select-text">JA</p>
-                    <div class="select-box-outer alkohol-ja">
-                        <div class="select-box-inner"></div>
-                    </div>
-                    <p class="select-text">NEJ</p>
-                    <div class="select-box-outer alkohol-nej">
-                        <div class="select-box-inner"></div>
-                    </div>
+                    <label for="Alkoholfritt-3" class="select-text">JA</label>
+                    <input class="radio-button alkohol-ja-radio" type="radio" name="Alkoholfritt-3" value="JA">
+                    <label for="Alkoholfritt-3" class="select-text">NEJ</label>
+                    <input class="radio-button alkohol-nej-radio" type="radio" name="Alkoholfritt-3" value="NEJ">
                 </div>
 
-                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN? <span class="red">*</span> (FÖRST TILL KVARN!)</p>
+                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN?<span class="red">*</span> (FÖRST TILL KVARN!)</p>
                 <div class="dricka-select-container">
-                    <p class="select-text">JA</p>
-                    <div class="select-box-outer sovplats-ja">
-                        <div class="select-box-inner"></div>
-                    </div>
-                    <p class="select-text">NEJ</p>
-                    <div class="select-box-outer sovplats-nej">
-                        <div class="select-box-inner"></div>
-                    </div>
+                    <label for="Sovplats-3" class="select-text">JA</label>
+                    <input class="radio-button sovplats-ja-radio" type="radio" name="Sovplats-3" value="JA">
+                    <label for="Sovplats-3" class="select-text">NEJ</label>
+                    <input class="radio-button sovplats-nej-radio" type="radio" name="Sovplats-3" value="NEJ">
                 </div>
                 <div class="divider"></div>
             </div>
-
-           
+            <!-- End of person 3 -->
             <div class="person person-4 hide">
                 <h4 class="vilken-person">Person 4</h4>
-                <label for="Namn">FÖR- OCH EFTERNAMN <span class="red">*</span></label><br>
-                <input type="text" id="Namn-4" name="Namn" placeholder="FÖR- OCH EFTERNAMN"><br>
+                <label for="Namn-4" class="required">FÖR- OCH EFTERNAMN</label><br>
+                <input class="text-input" type="text" id="Namn-4" name="Namn-4" placeholder="FÖR- OCH EFTERNAMN"><br>
 
-                <label for="MatPref">SPECIALKOST/ALLERGIER <span class="red">*</span></label><br>
-                <input type="text" id="MatPref-4" name="MatPref" placeholder="SPECIALKOST/ALLERGIER">
+                <label for="MatPref-4" class="required">SPECIALKOST/ALLERGIER</label><br>
+                <input class="text-input" type="text" id="MatPref-4" name="MatPref-4" placeholder="SPECIALKOST/ALLERGIER">
+            
 
-                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN? <span class="red">*</span></p>
+                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN?<span class="red">*</span></p>
                 <div class="dricka-select-container">
-                    <p class="select-text">JA</p>
-                    <div class="select-box-outer alkohol-ja">
-                        <div class="select-box-inner"></div>
-                    </div>
-                    <p class="select-text">NEJ</p>
-                    <div class="select-box-outer alkohol-nej">
-                        <div class="select-box-inner"></div>
-                    </div>
+                    <label for="Alkoholfritt-4" class="select-text">JA</label>
+                    <input class="radio-button alkohol-ja-radio" type="radio" name="Alkoholfritt-4" value="JA">
+                    <label for="Alkoholfritt-4" class="select-text">NEJ</label>
+                    <input class="radio-button alkohol-nej-radio" type="radio" name="Alkoholfritt-4" value="NEJ">
                 </div>
 
-                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN? <span class="red">*</span> (FÖRST TILL KVARN!)</p>
+                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN?<span class="red">*</span> (FÖRST TILL KVARN!)</p>
                 <div class="dricka-select-container">
-                    <p class="select-text">JA</p>
-                    <div class="select-box-outer sovplats-ja">
-                        <div class="select-box-inner"></div>
-                    </div>
-                    <p class="select-text">NEJ</p>
-                    <div class="select-box-outer sovplats-nej">
-                        <div class="select-box-inner"></div>
-                    </div>
+                    <label for="Sovplats-4" class="select-text">JA</label>
+                    <input class="radio-button sovplats-ja-radio" type="radio" name="Sovplats-4" value="JA">
+                    <label for="Sovplats-4" class="select-text">NEJ</label>
+                    <input class="radio-button sovplats-nej-radio" type="radio" name="Sovplats-4" value="NEJ">
                 </div>
                 <div class="divider"></div>
             </div>
-
-
+            <!-- End of person 4 -->
             <div class="person person-5 hide">
                 <h4 class="vilken-person">Person 5</h4>
-                <label for="Namn">FÖR- OCH EFTERNAMN <span class="red">*</span></label><br>
-                <input type="text" id="Namn-5" name="Namn" placeholder="FÖR- OCH EFTERNAMN"><br>
+                <label for="Namn-5" class="required">FÖR- OCH EFTERNAMN</label><br>
+                <input class="text-input" type="text" id="Namn-5" name="Namn-5" placeholder="FÖR- OCH EFTERNAMN"><br>
 
-                <label for="MatPref">SPECIALKOST/ALLERGIER <span class="red">*</span></label><br>
-                <input type="text" id="MatPref-5" name="MatPref" placeholder="SPECIALKOST/ALLERGIER">
+                <label for="MatPref-5" class="required">SPECIALKOST/ALLERGIER</label><br>
+                <input class="text-input" type="text" id="MatPref-5" name="MatPref-5" placeholder="SPECIALKOST/ALLERGIER">
+            
 
-                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN? <span class="red">*</span></p>
+                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN?<span class="red">*</span></p>
                 <div class="dricka-select-container">
-                    <p class="select-text">JA</p>
-                    <div class="select-box-outer alkohol-ja">
-                        <div class="select-box-inner"></div>
-                    </div>
-                    <p class="select-text">NEJ</p>
-                    <div class="select-box-outer alkohol-nej">
-                        <div class="select-box-inner"></div>
-                    </div>
+                    <label for="Alkoholfritt-5" class="select-text">JA</label>
+                    <input class="radio-button alkohol-ja-radio" type="radio" name="Alkoholfritt-5" value="JA">
+                    <label for="Alkoholfritt-5" class="select-text">NEJ</label>
+                    <input class="radio-button alkohol-nej-radio" type="radio" name="Alkoholfritt-5" value="NEJ">
                 </div>
 
-                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN? <span class="red">*</span> (FÖRST TILL KVARN!)</p>
+                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN?<span class="red">*</span> (FÖRST TILL KVARN!)</p>
                 <div class="dricka-select-container">
-                    <p class="select-text">JA</p>
-                    <div class="select-box-outer sovplats-ja">
-                        <div class="select-box-inner"></div>
-                    </div>
-                    <p class="select-text">NEJ</p>
-                    <div class="select-box-outer sovplats-nej">
-                        <div class="select-box-inner"></div>
-                    </div>
+                    <label for="Sovplats-5" class="select-text">JA</label>
+                    <input class="radio-button sovplats-ja-radio" type="radio" name="Sovplats-5" value="JA">
+                    <label for="Sovplats-5" class="select-text">NEJ</label>
+                    <input class="radio-button sovplats-nej-radio" type="radio" name="Sovplats-5" value="NEJ">
                 </div>
                 <div class="divider"></div>
             </div>
+            <!-- End of person 5 -->
+            
 
-                                            
             <label for="Låtval">ÖNSKA EN LÅT TILL BRÖLLOPSFESTENS SPELLISTA, ANGE LÅTNAMN OCH ARTIST:</label><br>
-            <input type="text" id="låtÖnskan" name="Låtval" placeholder="LÅTNAMN- OCH ARTIST">
-
+            <input class="text-input" type="text" id="låtÖnskan" name="Låtval" placeholder="LÅTNAMN- OCH ARTIST">
 
             <label for="telefon">ANGE ETT TELEFONNUMMER VI KAN NÅ ER PÅ:</label><br>
-            <input type="text" id="telefon" name="telefon" placeholder="TELEFONNUMMER">
+            <input class="text-input" type="text" id="telefon" name="telefon" placeholder="TELEFONNUMMER">
 
             <div class="godkänn-filmning-container">
-                <div class="select-box-outer filmning-ja">
-                    <div class="select-box-inner"></div>
-                </div>
-                <p class="filmning-para"><span class="spanID">JAG GODKÄNNER HÄRMED ATT BLI FILMAD OCH FOTOGRAFERAD UNDER BRÖLLOPSDAGEN</span> <span class="red">*</span>
-                </p>
+                <input class="radio-button filmning-ja-radio" type="radio" name="Filmning" value="GODKÄNNER" required>
+                <label for="Filmning" class="filmning-para required"><span class="godkännelse">JAG GODKÄNNER HÄRMED ATT BLI FILMAD OCH FOTOGRAFERAD UNDER BRÖLLOPSDAGEN</span></label>
             </div>
-        </form>
-        <div class="anmälan-button-div">
-            <button class="anmälan-button">ANMÄL</button>
-            <span id="validation-message" class="hide red">Se till att alla fält markerade med en * har blivit ifyllda!</span>
-        </div>
+
+            <div class="anmälan-button-div">
+                <button class="anmälan-button" type="submit">ANMÄL</button>
+            </div>
+        </form> 
+            
 
         <div class="ej-delta-info">
             <p class="ej-delta-text">Här ska du som inte kan delta ange ditt namn</p>
         </div>
-        <form class="ej-delta-form" id="ej-delta-form">
-            <label for="Namn&Efternamn">FÖR- OCH EFTERNAMN</label><br>
-            <input type="text" id="deltar-ej-namn" name="Namn&Efternamn" placeholder="FÖR- OCH EFTERNAMN"><br>
+        <form class="ej-delta-form" id="ej-delta-form" action="https://submit-form.com/OZY4PDj3">
+            <label for="Deltar-ej" class="required">FÖR- OCH EFTERNAMN</label><br>
+            <input type="text" id="deltar-ej-namn" name="Deltar-ej" placeholder="FÖR- OCH EFTERNAMN" required><br>
+            <div class="anmälan-button-div">
+                <button class="deltar-ej-button">SKICKA</button>
+                <span id="un-validation-message" class="hide red">Se till att fältet ovan är ifyllt med namnet på den som inte kan delta.</span>
+            </div>
         </form>
-        <div class="anmälan-button-div">
-            <button class="deltar-ej-button">SKICKA</button>
-            <span id="un-validation-message" class="hide red">Se till att fältet ovan är ifyllt med namnet på den som inte kan delta.</span>
-        </div>
+
 
 
     </div>
