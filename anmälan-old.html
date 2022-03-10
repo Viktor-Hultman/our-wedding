@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="anmälan.js" defer></script>
+    <title>Höglin 2022 - Anmälan</title>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <ul class="nav-list">
+            <li class="nav-item startsida-nav-item" onclick="toSite('index')">STARTSIDA</li>
+            <li class="nav-item anmälan-nav-item" onclick="toSite('anmälan')">ANMÄLAN</li>
+            <li class="nav-item önskelista-nav-item" onclick="toSite('önskelista')">ÖNSKELISTA</li>
+            <li class="nav-item information-nav-item" onclick="toSite('information')">INFORMATION</li>
+        </ul>
+    </nav>
+    <svg class="hamburger" viewBox='0 0 10 8' width='30'>
+        <path d='M1 1h8M1 4h 8M1 7h8' 
+            stroke='#fff' 
+            stroke-width='1.15' 
+            stroke-linecap='round'/>
+    </svg>
+    <ul class="hamburger-menu">
+        <svg class="menu-exit" viewBox="0 0 20 20" width='30'>
+            <path fill="#343434" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+        </svg>
+        <li class="burger-item lined" onclick="toSite('index')">STARTSIDA</li>
+        <li class="burger-item lined" onclick="toSite('information')">INFORMATION</li>
+        <li class="burger-item lined" onclick="toSite('önskelista')">ÖNSKELISTA</li>
+        <li class="burger-item lined" onclick="toSite('anmälan')">ANMÄLAN</li>
+    </ul>
+    <div class="hero-container">
+        <img class="img" src="imgs/Herobild_Viktor&Jessica_Hoglin.jpg">
+        <div class="hero-text">
+            <h1>VIKTOR & JESSICA</h1>
+            <p>#HÖGLIN2022</p>
+        </div>
+    </div>
+    <div class="heading-container">
+        <h2>ANMÄLAN</h2>
+    </div>
+    <div class="site-container anmälan-container">
+        <div class="anmälan-info">
+            <p class="anmälan-para">Här anmäler du dig som gäst på vårt bröllop. Anmälan är fortfarande öppen.
+                Om du inte har möjlighet att delta, vänligen anmäl det i <a class="form-länk" href="#ej-delta-form">formuläret längst ner på denna sida.</a>
+            </p>
+            <p class="anmälan-para">
+                Vid tekniska frågor angående anmälan kontaktar du Viktor Hultman (+46 70-018 20 85).
+            </p>
+        </div>
+
+        <form class="anmälan-form" action="https://submit-form.com/D0xEvRSx">
+            <input
+                type="hidden"
+                name="_feedback.success.title"
+                value="Er anmälan är nu mottagen!"
+            />
+            <input
+                type="hidden"
+                name="_feedback.error.title"
+                value="Det blev något fel när vi skulle ta emot er anmälan!"
+            />
+            <input
+                type="hidden"
+                name="_feedback.error.message"
+                value="Testa gärna igen och kontakta brudparet om problem kvarstår."
+            />
+            <label for="antal">HUR MÅNGA PERSONER VILL DU ANMÄLA? (OBS, ENDAST INBJUDNA)</label><br>
+            <select name="antal" id="antal">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select><br>
+            <div class="person person-1">
+                <h4 class="vilken-person hide">Person 1</h4>
+                <label for="Namn-1" class="required">FÖR- OCH EFTERNAMN</label><br>
+                <input class="text-input" type="text" id="Namn-1" name="Namn-1" placeholder="FÖR- OCH EFTERNAMN" required><br>
+
+                <label for="MatPref-1" class="required">SPECIALKOST/ALLERGIER</label><br>
+                <input class="text-input" type="text" id="MatPref-1" name="MatPref-1" placeholder="SPECIALKOST/ALLERGIER" required>
+            
+
+                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN?<span class="red">*</span></p>
+                <div class="dricka-select-container">
+                    <label for="Alkoholfritt-1" class="select-text">JA</label>
+                    <input class="radio-button alkohol-ja-radio" type="radio" name="Alkoholfritt-1" value="JA" required>
+                    <label for="Alkoholfritt-1" class="select-text">NEJ</label>
+                    <input class="radio-button alkohol-nej-radio" type="radio" name="Alkoholfritt-1" value="NEJ" required>
+                </div>
+
+                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN?<span class="red">*</span> (FÖRST TILL KVARN!)</p>
+                <div class="dricka-select-container">
+                    <label for="Sovplats-1" class="select-text">JA</label>
+                    <input class="radio-button sovplats-ja-radio" type="radio" name="Sovplats-1" value="JA" required>
+                    <label for="Sovplats-1" class="select-text">NEJ</label>
+                    <input class="radio-button sovplats-nej-radio" type="radio" name="Sovplats-1" value="NEJ" required>
+                </div>
+                <div class="divider"></div>
+            </div>
+            <!-- End of person 1 -->
+            <div class="person person-2 hide">
+                <h4 class="vilken-person">Person 2</h4>
+                <label for="Namn-2" class="required">FÖR- OCH EFTERNAMN</label><br>
+                <input class="text-input" type="text" id="Namn-2" name="Namn-2" placeholder="FÖR- OCH EFTERNAMN"><br>
+
+                <label for="MatPref-2" class="required">SPECIALKOST/ALLERGIER</label><br>
+                <input class="text-input" type="text" id="MatPref-2" name="MatPref-2" placeholder="SPECIALKOST/ALLERGIER">
+            
+
+                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN?<span class="red">*</span></p>
+                <div class="dricka-select-container">
+                    <label for="Alkoholfritt-2" class="select-text">JA</label>
+                    <input class="radio-button alkohol-ja-radio" type="radio" name="Alkoholfritt-2" value="JA">
+                    <label for="Alkoholfritt-2" class="select-text">NEJ</label>
+                    <input class="radio-button alkohol-nej-radio" type="radio" name="Alkoholfritt-2" value="NEJ">
+                </div>
+
+                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN?<span class="red">*</span> (FÖRST TILL KVARN!)</p>
+                <div class="dricka-select-container">
+                    <label for="Sovplats-2" class="select-text">JA</label>
+                    <input class="radio-button sovplats-ja-radio" type="radio" name="Sovplats-2" value="JA">
+                    <label for="Sovplats-2" class="select-text">NEJ</label>
+                    <input class="radio-button sovplats-nej-radio" type="radio" name="Sovplats-2" value="NEJ">
+                </div>
+                <div class="divider"></div>
+            </div>
+            <!-- End of person 2 -->
+            <div class="person person-3 hide">
+                <h4 class="vilken-person">Person 3</h4>
+                <label for="Namn-3" class="required">FÖR- OCH EFTERNAMN</label><br>
+                <input class="text-input" type="text" id="Namn-3" name="Namn-3" placeholder="FÖR- OCH EFTERNAMN"><br>
+
+                <label for="MatPref-3" class="required">SPECIALKOST/ALLERGIER</label><br>
+                <input class="text-input" type="text" id="MatPref-3" name="MatPref-3" placeholder="SPECIALKOST/ALLERGIER">
+            
+
+                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN?<span class="red">*</span></p>
+                <div class="dricka-select-container">
+                    <label for="Alkoholfritt-3" class="select-text">JA</label>
+                    <input class="radio-button alkohol-ja-radio" type="radio" name="Alkoholfritt-3" value="JA">
+                    <label for="Alkoholfritt-3" class="select-text">NEJ</label>
+                    <input class="radio-button alkohol-nej-radio" type="radio" name="Alkoholfritt-3" value="NEJ">
+                </div>
+
+                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN?<span class="red">*</span> (FÖRST TILL KVARN!)</p>
+                <div class="dricka-select-container">
+                    <label for="Sovplats-3" class="select-text">JA</label>
+                    <input class="radio-button sovplats-ja-radio" type="radio" name="Sovplats-3" value="JA">
+                    <label for="Sovplats-3" class="select-text">NEJ</label>
+                    <input class="radio-button sovplats-nej-radio" type="radio" name="Sovplats-3" value="NEJ">
+                </div>
+                <div class="divider"></div>
+            </div>
+            <!-- End of person 3 -->
+            <div class="person person-4 hide">
+                <h4 class="vilken-person">Person 4</h4>
+                <label for="Namn-4" class="required">FÖR- OCH EFTERNAMN</label><br>
+                <input class="text-input" type="text" id="Namn-4" name="Namn-4" placeholder="FÖR- OCH EFTERNAMN"><br>
+
+                <label for="MatPref-4" class="required">SPECIALKOST/ALLERGIER</label><br>
+                <input class="text-input" type="text" id="MatPref-4" name="MatPref-4" placeholder="SPECIALKOST/ALLERGIER">
+            
+
+                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN?<span class="red">*</span></p>
+                <div class="dricka-select-container">
+                    <label for="Alkoholfritt-4" class="select-text">JA</label>
+                    <input class="radio-button alkohol-ja-radio" type="radio" name="Alkoholfritt-4" value="JA">
+                    <label for="Alkoholfritt-4" class="select-text">NEJ</label>
+                    <input class="radio-button alkohol-nej-radio" type="radio" name="Alkoholfritt-4" value="NEJ">
+                </div>
+
+                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN?<span class="red">*</span> (FÖRST TILL KVARN!)</p>
+                <div class="dricka-select-container">
+                    <label for="Sovplats-4" class="select-text">JA</label>
+                    <input class="radio-button sovplats-ja-radio" type="radio" name="Sovplats-4" value="JA">
+                    <label for="Sovplats-4" class="select-text">NEJ</label>
+                    <input class="radio-button sovplats-nej-radio" type="radio" name="Sovplats-4" value="NEJ">
+                </div>
+                <div class="divider"></div>
+            </div>
+            <!-- End of person 4 -->
+            <div class="person person-5 hide">
+                <h4 class="vilken-person">Person 5</h4>
+                <label for="Namn-5" class="required">FÖR- OCH EFTERNAMN</label><br>
+                <input class="text-input" type="text" id="Namn-5" name="Namn-5" placeholder="FÖR- OCH EFTERNAMN"><br>
+
+                <label for="MatPref-5" class="required">SPECIALKOST/ALLERGIER</label><br>
+                <input class="text-input" type="text" id="MatPref-5" name="MatPref-5" placeholder="SPECIALKOST/ALLERGIER">
+            
+
+                <p class="dricka-para">ÖNSKAR DU DRICKA ALKOHOLFRITT UNDER FESTEN?<span class="red">*</span></p>
+                <div class="dricka-select-container">
+                    <label for="Alkoholfritt-5" class="select-text">JA</label>
+                    <input class="radio-button alkohol-ja-radio" type="radio" name="Alkoholfritt-5" value="JA">
+                    <label for="Alkoholfritt-5" class="select-text">NEJ</label>
+                    <input class="radio-button alkohol-nej-radio" type="radio" name="Alkoholfritt-5" value="NEJ">
+                </div>
+
+                <p class="dricka-para">ÖNSKAR DU BOKA ÖVERNATTNING PÅ GÅRDEN?<span class="red">*</span> (FÖRST TILL KVARN!)</p>
+                <div class="dricka-select-container">
+                    <label for="Sovplats-5" class="select-text">JA</label>
+                    <input class="radio-button sovplats-ja-radio" type="radio" name="Sovplats-5" value="JA">
+                    <label for="Sovplats-5" class="select-text">NEJ</label>
+                    <input class="radio-button sovplats-nej-radio" type="radio" name="Sovplats-5" value="NEJ">
+                </div>
+                <div class="divider"></div>
+            </div>
+            <!-- End of person 5 -->
+            
+
+            <label for="Låtval">ÖNSKA EN LÅT TILL BRÖLLOPSFESTENS SPELLISTA, ANGE LÅTNAMN OCH ARTIST:</label><br>
+            <input class="text-input" type="text" id="låtÖnskan" name="Låtval" placeholder="LÅTNAMN- OCH ARTIST">
+
+            <label for="telefon">ANGE ETT TELEFONNUMMER VI KAN NÅ ER PÅ:</label><br>
+            <input class="text-input" type="text" id="telefon" name="telefon" placeholder="TELEFONNUMMER">
+
+            <div class="godkänn-filmning-container">
+                <input class="radio-button filmning-ja-radio" type="radio" name="Filmning" value="GODKÄNNER" required>
+                <label for="Filmning" class="filmning-para required"><span class="godkännelse">JAG GODKÄNNER HÄRMED ATT BLI FILMAD OCH FOTOGRAFERAD UNDER BRÖLLOPSDAGEN</span></label>
+            </div>
+
+            <div class="anmälan-button-div">
+                <button class="anmälan-button" type="submit">ANMÄL</button>
+            </div>
+        </form> 
+            
+
+        <div class="ej-delta-info">
+            <p class="ej-delta-text">Här ska du som inte kan delta ange ditt namn</p>
+        </div>
+        <form class="ej-delta-form" id="ej-delta-form" action="https://submit-form.com/OZY4PDj3">
+            <label for="Deltar-ej" class="required">FÖR- OCH EFTERNAMN</label><br>
+            <input type="text" id="deltar-ej-namn" name="Deltar-ej" placeholder="FÖR- OCH EFTERNAMN" required><br>
+            <div class="anmälan-button-div">
+                <button class="deltar-ej-button">SKICKA</button>
+                <span id="un-validation-message" class="hide red">Se till att fältet ovan är ifyllt med namnet på den som inte kan delta.</span>
+            </div>
+        </form>
+
+
+
+    </div>
+    <footer class="footer">
+        <ul class="footer-list">
+            <li class="footer-item" onclick="toSite('index')"><span class="footer-text">STARTSIDA</span></li>
+            <li class="footer-item" onclick="toSite('information')"><span class="footer-text">INFORMATION</span></li>
+            <li class="footer-item" onclick="toSite('önskelista')"><span class="footer-text">ÖNSKELISTA</span></li>
+        </ul>
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+
+</html>

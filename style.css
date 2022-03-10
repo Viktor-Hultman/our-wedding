@@ -19,6 +19,14 @@ body {
     color: var(--light-black);
 }
 
+main {
+    min-height: calc(100vh - 76.8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
 p {
     line-height: 1.6;
 }
@@ -155,6 +163,7 @@ p {
     min-height: 250px;
     object-fit: cover;
 }
+
 
 .hero-text {
     width: 90%;
@@ -490,6 +499,12 @@ input::placeholder {
 label.required:after {
     content: "*";
     color: red;
+}
+
+.closed-msg {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
 }
 
 /* Anmälan */
@@ -1059,6 +1074,10 @@ label.required:after {
 
 
 @media screen and (max-width: 500px) {
+    main {
+        min-height: 100vh;
+    }
+
     .nav-list {
         display: none;
     }
