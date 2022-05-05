@@ -125,7 +125,7 @@ let önskelista = [
         "inköpsställe": "ELLOS",
         "länk": "https://www.ellos.se/ellos-home/servett-pembroke-i-lin-2-pack/1065570-11",
         "harLänk": true,
-        "tillgänglig": true
+        "tillgänglig": false
     },
     {
         "namn": "MENSOLAS VINSTÄLL",
