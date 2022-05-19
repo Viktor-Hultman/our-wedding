@@ -53,7 +53,7 @@ let önskelista = [
         "inköpsställe": "ELGIGANTEN",
         "länk": "https://www.elgiganten.se/product/hem-och-hushall/kaffemaskin-och-espresso/kaffebryggare/350819/moccamaster-manual-kaffebryggare-53703-svart?&scid=SEM7520722487&utm_source=google_search&utm_medium=SEM&utm_campaign=google-pla&utm_content=sda&gclid=Cj0KCQiA5OuNBhCRARIsACgaiqVzWXIJbeWmOdUaY5nWXyle_0t2v34nCFx5eDXmEWXRLms454HjjlYaAiPbEALw_wcB&gclsrc=aw.ds",
         "harLänk": true,
-        "tillgänglig": true
+        "tillgänglig": false
     },
     {
         "namn": "LS IDEAL KOCKKNIV",
