@@ -29,7 +29,7 @@ let önskelista = [
         "inköpsställe": "BAGAREN & KOCKEN",
         "länk": "https://bagarenochkocken.se/dukade-bordet/bestick/bestickset/robert-welch-arden-bestickset-24-del/?shopping_id_click=1067-21618-17461&gclid=Cj0KCQiA5OuNBhCRARIsACgaiqWxExy-kZVlUoB6LCJsM5pA-4VmYCni08qDY3otR_XSWT57qLmtpcoaAlrzEALw_wcB",
         "harLänk": true,
-        "tillgänglig": true
+        "tillgänglig": false
     },
     {
         "namn": "NOBLESSE LONGDRINKGLAS",
