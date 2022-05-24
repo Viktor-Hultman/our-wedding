@@ -818,6 +818,15 @@ label.required:after {
   animation-duration: 1.5s;
 }
 
+
+.full-size {
+    width: 100%;
+    background: #d0d0d0;
+    height: auto;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+
 @-webkit-keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
