@@ -3,9 +3,9 @@ function toSite(string) {
     window.location.href = fullPage
 }
 
-if(localStorage.getItem('logedInHoglin') == null) {
-    toSite("login")
-}
+// if(localStorage.getItem('logedInHoglin') == null) {
+//     toSite("login")
+// }
 
 const startLink =  document.querySelector(".startsida-nav-item")
 
