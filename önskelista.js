@@ -61,7 +61,7 @@ let önskelista = [
         "inköpsställe": "KITCHENTIME",
         "länk": "https://www.kitchentime.se/p/ideal-kockkniv-stal-svart-20-cm?gclid=Cj0KCQiA5OuNBhCRARIsACgaiqVFgYh74YKLjsrFf1O9_l1oZ7nYx_snCqe9W1IacpJik2bgznt7nZkaAsMSEALw_wcB",
         "harLänk": true,
-        "tillgänglig": true
+        "tillgänglig": false
     },
     {
         "namn": "WILTON BAKFORMAR",
@@ -77,7 +77,7 @@ let önskelista = [
         "inköpsställe": "ROYALDESIGN",
         "länk": "https://royaldesign.se/solstickan-brandslackare-2-kg?p=186027",
         "harLänk": true,
-        "tillgänglig": true
+        "tillgänglig": false
     },
     {
         "namn": "THE KINFOLK HOME",
