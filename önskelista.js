@@ -181,7 +181,7 @@ let önskelista = [
         "inköpsställe": "SPELEXPERTEN",
         "länk": "https://www.spelexperten.com/sallskapsspel/festspel/hint-1.html",
         "harLänk": true,
-        "tillgänglig": true
+        "tillgänglig": false
     },
     {
         "namn": "PRESENTKORT",
