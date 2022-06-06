@@ -37,7 +37,7 @@ let önskelista = [
         "inköpsställe": "CERVERA",
         "länk": "https://www.cervera.se/produkt/noblesse-longdrink-4-pack?gclid=Cj0KCQiA5OuNBhCRARIsACgaiqV51tyRbI4OZs2_i8O-GmTQpfs8sJnzd-oALR5CDTEcx-OgD9pXVgUaAhGjEALw_wcB&gclsrc=aw.ds",
         "harLänk": true,
-        "tillgänglig": true
+        "tillgänglig": false
     },
     {
         "namn": "PÅSLAKANSET ELMIRA - LINNEBEIGE (x2)",
