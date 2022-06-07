@@ -93,7 +93,7 @@ let önskelista = [
         "inköpsställe": "CERVERA",
         "länk": "https://www.cervera.se/produkt/ferm-ripple-champagneglas-15-cl-klar-2-pack?gclid=Cj0KCQiA5OuNBhCRARIsACgaiqW1wUEBl1QxAV1oh9cf2KrA-QDnLnZGGKs6PrfRqzJzyuF8ED4rJs8aAgH1EALw_wcB&gclsrc=aw.ds",
         "harLänk": true,
-        "tillgänglig": true
+        "tillgänglig": false
     },
     {
         "namn": "VAS DIANA LARGE - TRANSPARENT",
