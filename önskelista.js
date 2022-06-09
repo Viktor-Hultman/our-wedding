@@ -173,7 +173,7 @@ let önskelista = [
         "inköpsställe": "SPELEXPERTEN",
         "länk": "https://www.spelexperten.com/sallskapsspel/festspel/kalabalik.html",
         "harLänk": true,
-        "tillgänglig": true
+        "tillgänglig": false
     },
     {
         "namn": "BRÄDSPEL HINT",
