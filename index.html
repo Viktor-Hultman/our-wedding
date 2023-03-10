@@ -1,114 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
     <script src="index.js" defer></script>
     <title>Höglin 2022</title>
-</head>
+  </head>
 
-<body>
-    <nav class="nav-bar">
-        <ul class="nav-list">
-            <li class="nav-item anmälan-nav-item" onclick="toSite('anmälan')">ANMÄLAN</li>
-            <li class="nav-item önskelista-nav-item" onclick="toSite('önskelista')">ÖNSKELISTA</li>
-            <li class="nav-item information-nav-item" onclick="toSite('information')">INFORMATION</li>
-        </ul>
-    </nav>
-    <svg class="hamburger" viewBox='0 0 10 8' width='30'>
-        <path d='M1 1h8M1 4h 8M1 7h8' 
-            stroke='#fff' 
-            stroke-width='1.15' 
-            stroke-linecap='round'/>
-    </svg>
-    <ul class="hamburger-menu">
-        <svg class="menu-exit" viewBox="0 0 20 20" width='30'>
-            <path fill="#343434" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
-        </svg>
-        <li class="burger-item lined" onclick="toSite('index')">STARTSIDA</li>
-        <li class="burger-item lined" onclick="toSite('information')">INFORMATION</li>
-        <li class="burger-item lined" onclick="toSite('önskelista')">ÖNSKELISTA</li>
-        <li class="burger-item lined" onclick="toSite('anmälan')">ANMÄLAN</li>
-    </ul>
-    <div class="hero-container">
-        <img class="img" src="imgs/Herobild_Viktor&Jessica_Hoglin.jpg">
-        <div class="hero-text">
-            <h1>VIKTOR & JESSICA</h1>
-            <p>#HÖGLIN2022</p>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="info">
+          <p>
+            <b>Viktigt!</b> Om du vill dela någon av dessa bilder i sociala
+            medier så måste du tagga @brollopskompaniet (Instagram) eller
+            Bröllopskompaniet (Facebook) för att inte strida mot kontrakt och
+            bli betalningsskyldig.
+          </p>
         </div>
+        <div class="video-container">
+          <iframe
+            width="720"
+            height="480"
+            src="https://www.youtube.com/embed/uyHzV2vLOKY"
+            title="YouTube video"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="container">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00045.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00066.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00135.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00245.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00251.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00256.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00309.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00318.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00319.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00330.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00358.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00360.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00366.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00379.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00400.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00415.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00417.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00420.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00422.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00423.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00424.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00427.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00436.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00437.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00449.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00457.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00462.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00477.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00509.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00528.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00532.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00548.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00549.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00600.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00603.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00607.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00632.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00634.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00642.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00645.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00671.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00678.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00681.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00683.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00685.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00688.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00705.jpg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="imgs/Jessica&Viktor-00718.jpg" />
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+      </div>
     </div>
-    <div class="site-container">
-        <div class="content content-text full-size">
-            <h4 class="content-heading">INFORMATION FÖR ER SOM BOKAT BOENDE</h4>
-            <p class="content-para">
-                Alla ni som önskat sova över har blivit tilldelade rum i de olika husen på gården, i nära anslutning till logen där festen kommer att hållas. Ni har två alternativ för att hämta era nycklar.
-                <br><br>
-                <strong>Alternativ 1</strong>
-                <br>
-                Ni hämtar er nyckel innan vigseln. Ni kommer då till gården mellan kl 11-13. När ni kommit till gården ringer ni vår toastmadame Henni på 076 001 24 92 som kommer att ge er nyckel och information om ert boende. Gårdsbutiken och restaurangen är öppen om man vill fika eller äta lunch.
-                <br>
-                I varje hus finns ett fullt utrustat kök så ni har även möjlighet att ta med och göra egen lunch om ni vill.
-                <br><br>
-                <strong>Alternativ 2</strong>
-                <br>
-                Ni får er nyckel när ni anländer till festen efter vigseln. Vår toastmadame Henni kommer då att ta emot er påväg till brudskålen och ge er nyckel och information om ert boende. Det kan bli lite rörigt och ni kommer kanske inte att hinna ta er till rummet direkt.
-                <br><br>
-                Priset för ert boende är 300 SEK per vuxen och 100 SEK per barn. Vänligen swisha er betalning till 073 978 03 27 (Jessica), <strong>senast den 5 juni.</strong>
-                <br><br>
-                Frukost serveras på söndagen i restaurangen under logen. Exakt tid informeras ni om när ni får er nyckel.
-                <br><br>
-                Vi ser fram emot att fira med er!
-            </p>
-        </div>
-        <div class="content content-text" id="cont1">
-            <h4 class="content-heading">INFORMATION OM BRÖLLOPET</h4>
-            <p class="content-para">
-                Här hittar du all information gällande vårt bröllop såsom 
-                vägbeskrivning till kyrka och festlokal, bokning av boende, vilka som ingår i 
-                brudföljet, hur du anmäler att du vill hålla tal etc. 
-                Här hittar du också kontaktinformation om du har några ytterligare frågor.
-            </p>
-            <span class="content-link" onclick="toSite('information')">LÄS MER</span>
-        </div>
-        <div class="content" id="cont2">
-            <img class="content-img" src="imgs/Information.png">
-        </div>
-
-        <div class="content" id="cont3">
-            <img class="content-img" src="imgs/Önskelista.png">
-        </div>
-        <div class="content content-text" id="cont4">
-            <h4 class="content-heading">VÅR ÖNSKELISTA</h4>
-            <p class="content-para">
-                Om du skulle vilja köpa en bröllopsgåva så är vi såklart mycket tacksamma. 
-                Här hittar du en lista på vad vi i så fall önskar oss, om ni behöver idéer. 
-            </p>
-            <span class="content-link" onclick="toSite('önskelista')">LÄS MER</span>
-        </div>
-
-        <div class="content content-text" id="cont5">
-            <h4 class="content-heading">ANMÄLAN</h4>
-            <p class="content-para">
-                Här anmäler du dig till bröllopet och anger bland annat eventuella 
-                kostpreferenser, om du önskar boka boende på gården etc.
-            </p>
-            <span class="content-link" onclick="toSite('anmälan')">LÄS MER</span>
-        </div>
-        <div class="content" id="cont6">
-            <img class="content-img" src="imgs/Anmälan.png">
-        </div>
-
-    </div>
-    <footer class="footer">
-        <ul class="footer-list">
-            <li class="footer-item" onclick="toSite('information')"><span class="footer-text">INFORMATION</span></li>
-            <li class="footer-item" onclick="toSite('önskelista')"><span class="footer-text">ÖNSKELISTA</span></li>
-            <li class="footer-item" onclick="toSite('anmälan')"><span class="footer-text">ANMÄLAN</span></li>
-        </ul>
-    </footer>
-</body>
-
+  </body>
 </html>

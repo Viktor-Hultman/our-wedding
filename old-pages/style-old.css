@@ -1,0 +1,1148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+    --light-black: #343434;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;  
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--light-black);
+}
+
+main {
+    min-height: calc(100vh - 76.8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.nav-bar {
+    width: 100%;
+    z-index: 3;
+}
+
+.nav-list {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.nav-item {
+    float: right;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    transition: 0.3s;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    border-bottom-color: #fff;
+}
+
+.startsida-nav-item {
+    float: left;
+    margin-left: 0px;
+}
+
+.anmälan-nav-item {
+    border: 2px solid #fff;
+    transition: 0.3s;
+    padding: 8px 15px;
+    margin-top: 0px;
+}
+
+.anmälan-nav-item:hover {
+    background: #fff;
+    color: var(--light-black);
+}
+
+.hamburger {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 5px;
+    z-index: 1;
+}
+
+.hamburger:hover {
+    filter: invert(0.2);
+    cursor: pointer;
+}
+
+.menu-exit {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.menu-exit:hover {
+    filter: invert(0.5);
+    cursor: pointer;
+}
+
+.hamburger-menu {
+    display: none;
+    right: 0px;
+    top: -2000px;
+    z-index: 1;
+    position: fixed;
+    list-style-type: none;
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.dropdown-animation {
+    animation: dropping 1s forwards;
+}
+
+@keyframes dropping {
+    from { top: -2000px; }
+    to {top: 0px;}
+}
+
+.reset-animation {
+    animation: reset 1s forwards;
+}
+
+@keyframes reset {
+    from { top: 0px; }
+    to {top: -2000px;}
+}
+
+
+.burger-item {
+    margin-top: 30px;
+    padding: 5px;
+    border-bottom: 2px solid #fff;
+    transition: 0.3s;
+}
+
+.burger-item:hover {
+    border-color: var(--light-black);
+    cursor: pointer;
+}
+
+.hero-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin: -76.8px 0px 0px 0px;
+}
+
+.img {
+    max-width: 100%;
+    min-height: 250px;
+    object-fit: cover;
+}
+
+
+.hero-text {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, 20%);
+}
+
+.hero-text h1, p {
+    font-weight: lighter;
+}
+
+.hero-text h1 {
+    font-size: 46px;
+}
+
+.banner-text {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, 20%);
+}
+
+.banner-text h1, p {
+    font-weight: lighter;
+}
+
+.banner-text h1 {
+    font-size: 46px;
+}
+
+.heading-container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.heading-container h2 {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.site-container {
+    width: 90%;
+    margin: 5% 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-text {
+    width: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 5%;
+}
+
+.content-para {
+    font-size: 16px;
+    padding: 25px 0px;
+    text-align: left;
+}
+
+.content-link {
+    font-size: 16px;
+    border: 1.5px solid var(--light-black);
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+.content-link:hover {
+    cursor: pointer;
+    background: var(--light-black);
+    color: #fff;
+}
+
+.content-img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+/* Anmälan */
+.anmälan-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+}
+
+.anmälan-info {
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.anmälan-tec-info {
+    height: 170px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.anmälan-para {
+    text-align: left;
+    margin: 20px 0px;
+}
+
+.anmälan-form {
+    width: 60%;
+    padding: 50px 50px 0px 50px;
+    background: #f0f0f0;
+}
+
+.ej-delta-form {
+    width: 60%;
+    padding: 50px 50px 0px 50px;
+    background: #f0f0f0;
+}
+
+.ej-delta-info {
+    width: 60%;
+    padding: 50px 50px 0px 50px;
+    background: #f0f0f0;
+    margin-top: 50px;
+}
+
+.ej-delta-text {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#antal {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.vilken-person {
+    margin: 10px 0px;
+}
+
+.text-input {
+    width: 100%;
+    height: 20px;
+    padding: 5px 0px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border: 1.5px solid #cacaca;
+}
+
+.ej-delta-form input {
+    width: 100%;
+    height: 20px;
+    padding: 5px 0px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border: 1.5px solid #cacaca;
+}
+
+input::placeholder {
+    font-style: italic;
+    padding: 10px;
+}
+
+.dricka-para {
+    margin-bottom: 5px;
+}
+
+.dricka-select-container {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.select-box-outer {
+    min-width: 16px;
+    height: 16px;
+    border: 1.5px solid #cacaca;
+    border-radius: 1.5px;
+    margin: 0px 30px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.select-box-outer:hover {
+    cursor: pointer;
+}
+
+.select-box-inner {
+    width: 70%;
+    height: 70%;
+    border-radius: 1.5px;
+    background: var(--light-black);
+    display: none;
+}
+
+.selected {
+    display: block;
+}
+
+.godkänn-filmning-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.filmning-para {
+    font-size: 12px;
+}
+
+.radio-button {
+    min-width: 30px;
+    min-height: 20px;
+    margin: 5px 30px 5px 5px;
+}
+
+.filmning-ja-radio {
+    min-width: 30px;
+    min-height: 20px;
+    margin: 5px;
+}
+
+.anmälan-button-div {
+    width: 60%;
+    padding: 0px 50px 50px 50px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.anmälan-button {
+    width: 90px;
+    height: 30px;
+    border: 1.5px solid var(--light-black);
+    background: var(--light-black);
+    color:white;
+    transition: 0.3s;
+}
+
+.anmälan-button:hover {
+    cursor: pointer;
+    color: var(--light-black);
+    background: white;
+}
+
+.anmälan-button:active {
+    border-color: white;
+}
+
+#deltar-ej-namn {
+    margin-bottom: 50px;
+}
+
+.deltar-ej-button {
+    width: 90px;
+    height: 30px;
+    border: 1.5px solid var(--light-black);
+    background: var(--light-black);
+    color:white;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.deltar-ej-button:hover {
+    cursor: pointer;
+    color: var(--light-black);
+    background: white;
+}
+
+.deltar-ej-button:active {
+    border-color: white;
+}
+
+.form-länk {
+    font-weight: bold;
+}
+
+.form-länk:link {
+    color: var(--light-black);
+}
+
+.form-länk:visited {
+    color: var(--light-black);
+}
+
+.red {
+    color: rgb(255, 35, 35);
+}
+
+#validation-message {
+    margin-top: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: rgb(192, 192, 192);
+    margin: 0px 0px 20px 0px;
+}
+
+label.required:after {
+    content: "*";
+    color: red;
+}
+
+.closed-msg {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+/* Anmälan */
+
+/* Önskelista */
+
+.önskelista-container {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+
+.önskelista-info {
+    width: 80%;
+}
+
+.önskelista-para {
+    text-align: center;
+    margin: 20px 0px;
+    text-align: left;
+}
+
+.align-end {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.sortering-select {
+    margin-top: 5px;
+}
+
+.sortering-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;  
+}
+
+.list-titles {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.item {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.item-titles {
+    margin: 0px;
+    height: 40px;
+}
+
+.item a{
+    color: black;
+}
+
+.item-produkt {
+    width: 45%;
+    display: flex;
+    align-items: center;
+}
+
+.item-pris {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.item-inköpsställen {
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.produkt {
+    padding: 5px 10px 5px 10px;
+    background: #EAEAEA;
+    height: 100%;
+}
+
+.pris {
+    padding: 5px 10px 5px 10px;
+    background: #F7F7F7;
+    height: 100%;
+}
+
+.inköpsställen {
+    padding: 5px 10px 5px 10px;
+    background: #EAEAEA;
+    height: 100%;
+}
+
+/* Önskelista */
+
+/* Information */
+
+.information-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.anchor-tags {
+    margin: 0px 0px 50px 0px;
+}
+
+.anchor-tag-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.anchor-tag {
+    text-decoration: none;
+    color: var(--light-black);
+    padding: 8px 0px;
+}
+
+.anchor-tag-item {
+    font-size: 18px;
+    transition: 0.3s;
+    border-bottom: 2px solid #fff;
+    margin: 0px 20px;
+    padding: 8px 0px;
+}
+
+.anchor-tag-item:hover {
+    cursor: pointer;
+    border-bottom-color: var(--light-black);
+}
+
+.image-banner {
+    position: relative;
+    text-align: center;
+}
+
+.plats {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0px;
+    width: 90%;
+}
+
+.plats-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 45%;
+}
+
+.plats-para {
+    text-align: left;
+}
+
+.plats-heading {
+    margin-bottom: 10px;
+}
+
+.plats-karta {
+    width: 45%;
+}
+
+.left-aligned {
+    text-align: left;
+    font-weight: bold;
+}
+
+.boende-para {
+    margin-bottom: 20px;
+}
+
+.map {
+    width: 100%;
+    min-height: 300px;
+}
+
+.FAQ {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0px;
+    width: 90%;
+}
+
+.FAQ-heading {
+    margin-bottom: 5px;
+}
+
+.FAQ-para {
+    margin-bottom: 20px;
+}
+
+.ps-text {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.hero-text-brudfölje {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, 0%);
+}
+
+.hero-text-brudfölje h1 {
+    font-weight: lighter;
+    font-size: 46px;
+}
+
+.Kontaktuppgifter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.kontakt-column {
+    width: 35%;
+    padding: 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kontakt-row {
+    text-align: center;
+    padding: 0px 20px;
+    margin-bottom: 15px;
+}
+
+.kontakt-row h4 {
+    margin-bottom: 5px;
+}
+
+/* Slideshow */
+
+.mySlides {
+    display: none;
+    width: 100%;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    width: 45%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+.full-size {
+    width: 100%;
+    background: #d0d0d0;
+    height: auto;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* Slideshow */
+
+/* Information */
+
+#password-input {
+    height: 20px;
+    padding: 5px 0px;
+    margin: 5px 30px 20px 30px;
+    font: small-caption;
+    font-size: 16px;
+}
+
+#login-button {
+    width: 90px;
+    height: 30px;
+    border: 1.5px solid var(--light-black);
+    color: var(--light-black);
+    background: white;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+#login-button:hover {
+    cursor: pointer;
+    background: var(--light-black);
+    color:white;
+}
+
+#login-button:active {
+    border-color: white;
+}
+
+.login-button-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    height: 80vh;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form label {
+    text-align: left;
+    margin: 80px 30px 0px 30px;
+}
+
+.login-heading {
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    background: #ebebeb;
+}
+
+.footer-list {
+    list-style-type: none;
+    padding: 0px 5%;
+}
+
+.footer-item {
+    font-size: 14px;
+    margin: 12px 0px;
+}
+
+.footer-text {
+    padding: 3px 0px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    transition: 0.3s;
+}
+
+.footer-text:hover {
+    cursor: pointer;
+    border-bottom-color: var(--light-black);
+}
+/* Footer */
+
+@media screen and (max-width: 1250px) {
+    .boende-container {
+        flex-direction: column;
+    }
+
+    .slideshow-container {
+        width: 100%;
+    }
+
+    .boende-text {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+}
+
+/* Media querys */
+@media screen and (max-width: 1040px) {
+    .site-container {
+        margin-top: 0px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .content-text {
+        padding: 20px 15%;
+    }
+
+    #cont1 {
+        order: 1;
+    }
+    #cont2 {
+        order: 2;
+    }
+    #cont3 {
+        order: 4;
+    }
+    #cont4 {
+        order: 3;
+    }
+    #cont5 {
+        order: 5;
+    }
+    #cont6 {
+        order: 6;
+    }
+
+    .plats {
+        flex-direction: column;
+    }
+
+    .plats-karta {
+        width: 100%;
+    }
+
+    .plats-text {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    #info3 {
+        order: 8
+    }
+
+    #info4 {
+        order: 7
+    }
+
+    .kontakt-column {
+        width: 45%;
+    }
+
+    .footer {
+        justify-content: center;
+    }
+
+    .footer-list {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .hero-text{
+        top: 50%;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .site-container {
+        margin-bottom: 0px;
+        width: 100%;
+    }
+
+    .information-container {
+        width: 100%;
+    }
+
+    .content-text {
+        padding: 20px 7%;
+    }
+
+    .anmälan-info {
+        padding: 0px 5%;
+    }
+
+    .anchor-tag-item {
+        font-size: 16px;
+        margin: 0px 7px;
+    }
+    
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .heading-container h2 {
+        font-size: 30px;
+    }
+
+    .banner-text h1 {
+        font-size: 30px;
+    }
+    
+    .hero-text-brudfölje {
+        top: 35%;
+    }
+
+    .hero-text-brudfölje h1 {
+        font-size: 30px;
+    }
+
+    .map {
+        min-height: 200px;
+    }
+
+    .Kontaktuppgifter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kontakt-column {
+        width: 80%;
+    }
+
+    .sortering-div {
+        padding-right: 10px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    main {
+        min-height: 100vh;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .hero-container {
+        margin: 0px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .item-pris {
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .item-produkt {
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .item-inköpsställen {
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .anchor-tag-item {
+        font-size: 14px;
+        margin: 0px 5px;
+    }
+
+    .content {
+        height: 300px;
+    }
+
+    .full-size {
+        height: auto;
+        margin: 10px 0px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .login-heading {
+        font-size: 26px;
+    }
+
+    .login-datum {
+        font-size: 22px;
+    }
+
+    .hero-text-brudfölje h1 {
+        font-size: 26px;
+    }
+}
+
+
+/* Media querys */
